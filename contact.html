@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactez-nous - SAGIR</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background: #f8f9fa;
+        }
+
+        /* Hero Section */
+        .contact-hero {
+            background: linear-gradient(135deg, #002B5C 0%, #003d7a 100%);
+            color: white;
+            padding: 80px 40px 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><circle cx="100" cy="100" r="200" fill="rgba(255,255,255,0.03)"/><circle cx="1100" cy="500" r="250" fill="rgba(255,255,255,0.03)"/><circle cx="600" cy="300" r="150" fill="rgba(255,255,255,0.03)"/></svg>');
+            background-size: cover;
+        }
+
+        .contact-hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact-hero h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+
+        .contact-hero p {
+            font-size: 20px;
+            opacity: 0.95;
+            margin-bottom: 32px;
+        }
+
+        /* Main Contact Section */
+        .contact-main {
+            padding: 80px 40px;
+            max-width: 1400px;
+            margin: -40px auto 0;
+            position: relative;
+            z-index: 2;
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 60px;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Left Column - Contact Info */
+        .contact-info {
+            background: linear-gradient(135deg, #002B5C 0%, #003d7a 100%);
+            color: white;
+            padding: 60px 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-info::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 300px;
+            height: 300px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+        }
+
+        .contact-info::after {
+            content: '';
+            position: absolute;
+            bottom: -150px;
+            left: -100px;
+            width: 350px;
+            height: 350px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 50%;
+        }
+
+        .contact-info-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact-info h2 {
+            font-size: 32px;
+            margin-bottom: 16px;
+        }
+
+        .contact-info > .contact-info-content > p {
+            font-size: 16px;
+            opacity: 0.9;
+            margin-bottom: 40px;
+            line-height: 1.7;
+        }
+
+        .info-item {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 32px;
+            align-items: flex-start;
+        }
+
+        .info-icon {
+            flex-shrink: 0;
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            backdrop-filter: blur(10px);
+        }
+
+        .info-text h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .info-text p {
+            font-size: 15px;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+
+        .info-text a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .info-text a:hover {
+            opacity: 0.7;
+        }
+
+        /* Social Links */
+        .social-links {
+            display: flex;
+            gap: 16px;
+            margin-top: 40px;
+        }
+
+        .social-link {
+            width: 44px;
+            height: 44px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .social-link:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-3px);
+        }
+
+        /* Right Column - Contact Form */
+        .contact-form-container {
+            padding: 60px 50px;
+        }
+
+        .contact-form-container h2 {
+            font-size: 32px;
+            color: #002B5C;
+            margin-bottom: 12px;
+        }
+
+        .contact-form-container > p {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 32px;
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 24px;
+        }
+
+        label {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 14px 16px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 15px;
+            font-family: inherit;
+            transition: all 0.3s ease;
+            background: white;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="tel"]:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #002B5C;
+            box-shadow: 0 0 0 3px rgba(0, 43, 92, 0.1);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 140px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 16px 32px;
+            background: linear-gradient(135deg, #7CB342 0%, #689F38 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(124, 179, 66, 0.3);
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(124, 179, 66, 0.4);
+        }
+
+        /* Quick Contact Cards */
+        .quick-contact {
+            padding: 60px 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .quick-contact h2 {
+            text-align: center;
+            font-size: 36px;
+            color: #002B5C;
+            margin-bottom: 16px;
+        }
+
+        .quick-contact > p {
+            text-align: center;
+            color: #666;
+            margin-bottom: 48px;
+            font-size: 18px;
+        }
+
+        .quick-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+        }
+
+        .quick-card {
+            background: white;
+            padding: 40px 32px;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border-top: 4px solid transparent;
+        }
+
+        .quick-card:nth-child(1) {
+            border-top-color: #7CB342;
+        }
+
+        .quick-card:nth-child(2) {
+            border-top-color: #00838F;
+        }
+
+        .quick-card:nth-child(3) {
+            border-top-color: #FFA726;
+        }
+
+        .quick-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+        }
+
+        .quick-card-icon {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto 24px;
+            background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+        }
+
+        .quick-card:nth-child(1) .quick-card-icon {
+            background: linear-gradient(135deg, #7CB342 0%, #689F38 100%);
+        }
+
+        .quick-card:nth-child(2) .quick-card-icon {
+            background: linear-gradient(135deg, #00838F 0%, #006978 100%);
+        }
+
+        .quick-card:nth-child(3) .quick-card-icon {
+            background: linear-gradient(135deg, #FFA726 0%, #FB8C00 100%);
+        }
+
+        .quick-card h3 {
+            font-size: 22px;
+            color: #002B5C;
+            margin-bottom: 12px;
+        }
+
+        .quick-card p {
+            font-size: 15px;
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .quick-card-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            background: #f5f5f5;
+            color: #002B5C;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .quick-card-btn:hover {
+            background: #002B5C;
+            color: white;
+        }
+
+        /* Map Section */
+        .map-section {
+            padding: 0 40px 80px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .map-container {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            height: 450px;
+            position: relative;
+        }
+
+        .map-placeholder {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: #002B5C;
+        }
+
+        .map-placeholder-icon {
+            font-size: 64px;
+            margin-bottom: 16px;
+        }
+
+        .map-placeholder p {
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .map-placeholder small {
+            font-size: 14px;
+            opacity: 0.7;
+            margin-top: 8px;
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-hero h1 {
+                font-size: 36px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .quick-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .contact-hero {
+                padding: 60px 24px 40px;
+            }
+
+            .contact-main {
+                padding: 60px 24px;
+            }
+
+            .contact-info,
+            .contact-form-container {
+                padding: 40px 24px;
+            }
+
+            .quick-contact {
+                padding: 40px 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="contact-hero">
+        <div class="contact-hero-content">
+            <h1>Contactez-nous</h1>
+            <p>Notre équipe est là pour répondre à toutes vos questions</p>
+        </div>
+    </section>
+
+    <!-- Main Contact Section -->
+    <section class="contact-main">
+        <div class="contact-container">
+            <!-- Left: Contact Info -->
+            <div class="contact-info">
+                <div class="contact-info-content">
+                    <h2>Informations de contact</h2>
+                    <p>N'hésitez pas à nous contacter par téléphone, courriel ou en personne. Nous sommes à votre écoute!</p>
+
+                    <div class="info-item">
+                        <div class="info-icon">📍</div>
+                        <div class="info-text">
+                            <h3>Adresse</h3>
+                            <p>
+                                AGENCE DE PLACEMENT SAGIR INC.<br>
+                                3235, avenue de la Gare<br>
+                                Mascouche, J7K 3C1
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">📞</div>
+                        <div class="info-text">
+                            <h3>Téléphone</h3>
+                            <p><a href="tel:450.313.0465">450.313.0465</a></p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">✉️</div>
+                        <div class="info-text">
+                            <h3>Courriel</h3>
+                            <p><a href="mailto:info@agencesagir.com">info@agencesagir.com</a></p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">🕐</div>
+                        <div class="info-text">
+                            <h3>Heures d'ouverture</h3>
+                            <p>
+                                Lundi - Vendredi: 8h00 - 17h00<br>
+                                Samedi - Dimanche: Fermé
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook">f</a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">in</a>
+                        <a href="#" class="social-link" aria-label="Instagram">📷</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Contact Form -->
+            <div class="contact-form-container">
+                <h2>Envoyez-nous un message</h2>
+                <p>Remplissez le formulaire ci-dessous et nous vous répondrons dans les plus brefs délais.</p>
+
+                <form>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">Prénom *</label>
+                            <input type="text" id="firstName" name="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Nom *</label>
+                            <input type="text" id="lastName" name="lastName" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Courriel *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Téléphone</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Sujet *</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Sélectionnez un sujet</option>
+                            <option value="petite-enfance">Services de la petite enfance</option>
+                            <option value="residences">Résidences pour aînés</option>
+                            <option value="candidat">Devenir candidat</option>
+                            <option value="autre">Autre demande</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Envoyer le message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Contact Cards -->
+    <section class="quick-contact">
+        <h2>Besoin d'aide rapide?</h2>
+        <p>Choisissez la meilleure façon de nous joindre selon vos besoins</p>
+
+        <div class="quick-cards">
+            <div class="quick-card">
+                <div class="quick-card-icon">👥</div>
+                <h3>Vous êtes un CPE ou une garderie?</h3>
+                <p>Trouvez rapidement le personnel qualifié dont vous avez besoin pour votre établissement.</p>
+                <a href="#" class="quick-card-btn">
+                    En savoir plus →
+                </a>
+            </div>
+
+            <div class="quick-card">
+                <div class="quick-card-icon">🏥</div>
+                <h3>Vous êtes une résidence pour aînés?</h3>
+                <p>Découvrez nos services de placement de personnel spécialisé en soins aux aînés.</p>
+                <a href="#" class="quick-card-btn">
+                    En savoir plus →
+                </a>
+            </div>
+
+            <div class="quick-card">
+                <div class="quick-card-icon">💼</div>
+                <h3>Vous cherchez un emploi?</h3>
+                <p>Consultez nos emplois disponibles et soumettez votre candidature en ligne.</p>
+                <a href="#" class="quick-card-btn">
+                    Voir les emplois →
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="map-container">
+            <div class="map-placeholder">
+                <div class="map-placeholder-icon">🗺️</div>
+                <p>Carte Google Maps</p>
+                <small>3235, avenue de la Gare, Mascouche, J7K 3C1</small>
+            </div>
+            <!-- In Elementor, replace this with actual Google Maps widget -->
+        </div>
+    </section>
+
+</body>
+</html>
