@@ -48,6 +48,45 @@
             color: #002B5C;
         }
 
+        .top-bar-social {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            padding-left: 24px;
+            margin-left: 24px;
+            border-left: 1px solid #e0e0e0;
+        }
+
+        .top-bar-social-link {
+            width: 28px;
+            height: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            color: #002B5C;
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .top-bar-social-link:hover {
+            background: #002B5C;
+            color: white;
+            border-color: #002B5C;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 968px) {
+            .top-bar-social {
+                border-left: none;
+                padding-left: 0;
+                margin-left: 0;
+            }
+        }
+
         .main-nav {
             background: white;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
@@ -623,6 +662,36 @@
             color: #002B5C;
         }
 
+        .footer-social {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            margin-top: 16px;
+        }
+
+        .footer-social-link {
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            color: #002B5C;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .footer-social-link:hover {
+            background: #002B5C;
+            color: white;
+            border-color: #002B5C;
+            transform: translateY(-3px);
+        }
+
         /* Responsive */
         @media (max-width: 968px) {
             .contact-container {
@@ -672,6 +741,10 @@
             <a href="mailto:info@agencesagir.com" class="top-bar-item">
                 ✉️ info@agencesagir.com
             </a>
+            <div class="top-bar-social">
+                <a href="https://www.facebook.com/agencesagir" target="_blank" rel="noopener" class="top-bar-social-link" aria-label="Facebook" title="Facebook">f</a>
+                <a href="https://www.linkedin.com/company/agencesagir" target="_blank" rel="noopener" class="top-bar-social-link" aria-label="LinkedIn" title="LinkedIn">in</a>
+            </div>
         </div>
     </div>
 
@@ -899,6 +972,10 @@
         <div class="footer-content">
             <p class="footer-permit">Numéro de permis: AP-2103464</p>
             <p style="margin-top: 8px;">Copyright © Agence de Placement SAGIR Inc.</p>
+            <div class="footer-social">
+                <a href="https://www.facebook.com/agencesagir" target="_blank" rel="noopener" class="footer-social-link" aria-label="Facebook" title="Suivez-nous sur Facebook">f</a>
+                <a href="https://www.linkedin.com/company/agencesagir" target="_blank" rel="noopener" class="footer-social-link" aria-label="LinkedIn" title="Suivez-nous sur LinkedIn">in</a>
+            </div>
         </div>
     </footer>
 
