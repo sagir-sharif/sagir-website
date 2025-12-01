@@ -26,6 +26,7 @@ This is a static website for Agence SAGIR, a personnel placement agency speciali
 7. How it works (4-step process)
 8. Why choose us section
 9. CTA section with contact buttons
+10. Footer with permit number
 
 **Color scheme**:
 - Primary blue: #002B5C (main brand color)
@@ -35,8 +36,14 @@ This is a static website for Agence SAGIR, a personnel placement agency speciali
 
 **Images**:
 - Logo: images/logo.jpg (used in navigation at 50px height)
-- Service card images use Unsplash URLs embedded in CSS
+- Service card images: CPE uses Unsplash URL, Résidences uses images/residences.jpg
 - Icons are emoji characters
+
+**Footer**: All pages include a footer with the agency permit number (AP-2103464). The footer uses:
+- Background: #f8f9fa
+- Border-top: 1px solid #e0e0e0
+- Text: "Numéro de permis: AP-2103464" in brand color (#002B5C)
+- Centered layout with 24px vertical padding
 
 ## Key Implementation Details
 
@@ -65,8 +72,46 @@ git push origin main
 
 ## File Structure
 
-- `index.html` - Main landing page (all-in-one with embedded CSS)
-- `contact.html` - Contact page placeholder (content to be added)
+- `index.html` - Main landing page with service cards linking to landing pages
+- `cpe-landing.html` - CPE (early childhood services) landing page with navigation
+- `residence-aines.html` - Senior residences landing page (no navigation menu)
+- `contact.html` - Contact page with form, contact info, and map placeholder
 - `images/logo.jpg` - Company logo
-- `CNAME` - GitHub Pages custom domain configuration
+- `images/residences.jpg` - Background image for residence service card
+- `CNAME` - GitHub Pages custom domain configuration (new.agencesagir.com)
 - `.gitignore` - Excludes .claude/ directory from version control
+
+## Important Standards
+
+**Permit number footer**: ALL pages must include the footer with permit number AP-2103464. When creating new pages, always add:
+```html
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-content">
+        <p class="footer-permit">Numéro de permis: AP-2103464</p>
+    </div>
+</footer>
+```
+
+And the corresponding CSS:
+```css
+/* Footer */
+.footer {
+    background: #f8f9fa;
+    padding: 24px 40px;
+    text-align: center;
+    border-top: 1px solid #e0e0e0;
+}
+
+.footer-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    color: #666;
+    font-size: 14px;
+}
+
+.footer-permit {
+    font-weight: 500;
+    color: #002B5C;
+}
+```
