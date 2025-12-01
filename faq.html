@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emplois Disponibles - Agence SAGIR</title>
+    <title>FAQ - Questions Fréquentes | Agence SAGIR</title>
     <style>
         * {
             margin: 0;
@@ -225,171 +225,81 @@
         /* Hero Section */
         .hero {
             background: linear-gradient(135deg, #002B5C 0%, #004080 100%);
-            padding: 80px 40px 60px;
+            padding: 80px 40px;
             color: white;
             text-align: center;
-        }
-
-        .hero-content {
-            max-width: 900px;
-            margin: 0 auto;
         }
 
         .hero h1 {
             font-size: 48px;
             font-weight: 700;
             margin-bottom: 20px;
-            line-height: 1.2;
         }
 
         .hero p {
             font-size: 20px;
             opacity: 0.95;
-            margin-bottom: 0;
         }
 
-        /* Jobs Section */
-        .jobs-section {
+        /* FAQ Section */
+        .faq-section {
             padding: 80px 40px;
             background: #f8f9fa;
         }
 
-        .jobs-container {
-            max-width: 1200px;
+        .faq-container {
+            max-width: 900px;
             margin: 0 auto;
         }
 
-        .section-header {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .section-header h2 {
-            font-size: 40px;
-            color: #002B5C;
-            margin-bottom: 16px;
-        }
-
-        .section-header p {
-            font-size: 18px;
-            color: #555;
-        }
-
-        /* Filter Section */
-        .filter-section {
+        .faq-item {
             background: white;
-            padding: 24px;
             border-radius: 12px;
-            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-            margin-bottom: 40px;
-        }
-
-        .filter-header {
-            font-size: 18px;
-            font-weight: 600;
-            color: #002B5C;
-            margin-bottom: 16px;
-        }
-
-        .filter-options {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
-
-        .filter-btn {
-            padding: 10px 20px;
-            background: #f8f9fa;
-            border: 2px solid #e0e0e0;
-            border-radius: 8px;
-            color: #555;
+            padding: 24px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
             cursor: pointer;
             transition: all 0.3s ease;
-            font-size: 15px;
-            font-weight: 500;
         }
 
-        .filter-btn:hover,
-        .filter-btn.active {
-            background: #002B5C;
-            color: white;
-            border-color: #002B5C;
+        .faq-item:hover {
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
         }
 
-        /* Jobs Grid */
-        .jobs-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 30px;
-        }
-
-        .job-card {
-            background: white;
-            border-radius: 12px;
-            padding: 32px;
-            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-            transition: all 0.3s ease;
-            border-top: 4px solid #002B5C;
-        }
-
-        .job-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-        }
-
-        .job-badge {
-            display: inline-block;
-            padding: 6px 12px;
-            background: #e3f2fd;
-            color: #002B5C;
-            border-radius: 6px;
-            font-size: 13px;
-            font-weight: 600;
-            margin-bottom: 16px;
-        }
-
-        .job-card h3 {
-            font-size: 24px;
-            color: #002B5C;
-            margin-bottom: 12px;
-            line-height: 1.3;
-        }
-
-        .job-card p {
-            color: #555;
-            font-size: 16px;
-            line-height: 1.7;
-            margin-bottom: 20px;
-        }
-
-        .job-meta {
+        .faq-question {
             display: flex;
-            gap: 16px;
-            margin-bottom: 20px;
-            font-size: 14px;
-            color: #666;
-        }
-
-        .job-meta-item {
-            display: flex;
+            justify-content: space-between;
             align-items: center;
-            gap: 6px;
-        }
-
-        .job-btn {
-            display: inline-block;
-            padding: 12px 24px;
-            background: #002B5C;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
+            font-size: 18px;
             font-weight: 600;
-            transition: all 0.3s ease;
+            color: #002B5C;
         }
 
-        .job-btn:hover {
-            background: #003d7a;
-            transform: translateX(4px);
+        .faq-icon {
+            font-size: 24px;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            padding-top: 0;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            padding-top: 16px;
+        }
+
+        .faq-answer p {
+            color: #555;
+            line-height: 1.8;
+            font-size: 16px;
         }
 
         /* CTA Section */
@@ -406,7 +316,7 @@
         }
 
         .cta-section h2 {
-            font-size: 40px;
+            font-size: 36px;
             margin-bottom: 20px;
         }
 
@@ -414,13 +324,6 @@
             font-size: 18px;
             margin-bottom: 32px;
             opacity: 0.95;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 16px;
-            justify-content: center;
-            flex-wrap: wrap;
         }
 
         .btn {
@@ -433,29 +336,14 @@
             align-items: center;
             gap: 8px;
             transition: all 0.3s ease;
-            cursor: pointer;
-        }
-
-        .btn-primary {
             background: white;
             color: #002B5C;
         }
 
-        .btn-primary:hover {
+        .btn:hover {
             background: #f5f5f5;
             transform: translateY(-2px);
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: white;
-            border: 2px solid white;
-        }
-
-        .btn-secondary:hover {
-            background: white;
-            color: #002B5C;
         }
 
         /* Footer */
@@ -513,25 +401,8 @@
                 font-size: 36px;
             }
 
-            .section-header h2 {
-                font-size: 32px;
-            }
-
-            .jobs-grid {
-                grid-template-columns: 1fr;
-            }
-
             .cta-section h2 {
-                font-size: 32px;
-            }
-
-            .filter-options {
-                flex-direction: column;
-            }
-
-            .filter-btn {
-                width: 100%;
-                text-align: center;
+                font-size: 28px;
             }
         }
     </style>
@@ -562,7 +433,7 @@
 
             <ul class="nav-menu">
                 <li class="nav-item">
-                    <a href="emplois-disponibles.html" class="nav-link active">Emplois Disponibles</a>
+                    <a href="emplois-disponibles.html" class="nav-link">Emplois Disponibles</a>
                 </li>
 
                 <li class="nav-item">
@@ -581,7 +452,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a href="faq.html" class="nav-link">FAQ</a>
+                    <a href="faq.html" class="nav-link active">FAQ</a>
                 </li>
 
                 <li class="nav-item">
@@ -598,125 +469,71 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1>Dernières offres d'emploi</h1>
-            <p>Joignez notre équipe si vous recherchez de nouveaux défis</p>
+            <h1>Questions Fréquentes</h1>
+            <p>Trouvez rapidement les réponses à vos questions</p>
         </div>
     </section>
 
-    <!-- Jobs Section -->
-    <section class="jobs-section">
-        <div class="jobs-container">
-            <div class="section-header">
-                <h2>Les postes vacants</h2>
-                <p>Découvrez les opportunités de carrière chez SAGIR</p>
-            </div>
-
-            <!-- Filter Section -->
-            <div class="filter-section">
-                <div class="filter-header">Filtrer par milieu</div>
-                <div class="filter-options">
-                    <button class="filter-btn active" data-filter="all">Tous les milieux</button>
-                    <button class="filter-btn" data-filter="petite-enfance">Petite enfance</button>
-                    <button class="filter-btn" data-filter="residences">Résidences pour aînés</button>
-                    <button class="filter-btn" data-filter="sante">Santé et services sociaux</button>
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Comment faire une demande de personnel?</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Vous pouvez faire une demande de personnel en nous contactant par téléphone au 450.313.0465 ou en remplissant notre formulaire de contact en ligne. Notre équipe vous répondra dans les 30 minutes.</p>
                 </div>
             </div>
 
-            <!-- Jobs Grid -->
-            <div class="jobs-grid">
-                <!-- Job Card 1 -->
-                <div class="job-card" data-category="petite-enfance">
-                    <div class="job-badge">Petite enfance</div>
-                    <h3>Éducateurs et éducatrices à l'enfance</h3>
-                    <div class="job-meta">
-                        <div class="job-meta-item">📍 Plusieurs régions</div>
-                        <div class="job-meta-item">⏰ Temps plein / partiel</div>
-                    </div>
-                    <p>
-                        Nous sommes activement à la recherche d'éducateurs et d'éducatrices à l'enfance. 
-                        Tu as de l'expérience en CPE ou en garderie? Rejoins notre équipe dynamique pour 
-                        des remplacements dans le réseau de la petite enfance.
-                    </p>
-                    <a href="contact.html" class="job-btn">Postuler maintenant →</a>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Quels types de personnel proposez-vous?</span>
+                    <span class="faq-icon">+</span>
                 </div>
-
-                <!-- Job Card 2 -->
-                <div class="job-card" data-category="petite-enfance">
-                    <div class="job-badge">Petite enfance</div>
-                    <h3>Éducateur ou éducatrice spécialisée</h3>
-                    <div class="job-meta">
-                        <div class="job-meta-item">📍 Plusieurs régions</div>
-                        <div class="job-meta-item">⏰ Temps plein / partiel</div>
-                    </div>
-                    <p>
-                        Tu es passionné(e) par les défis et le potentiel adaptatif humain? Tu es ouvert(e) 
-                        d'esprit, créative et dynamique? Tu as une facilité à t'adapter dans différents 
-                        milieux? Ce poste est pour toi!
-                    </p>
-                    <a href="contact.html" class="job-btn">Postuler maintenant →</a>
+                <div class="faq-answer">
+                    <p>Nous offrons du personnel qualifié pour la petite enfance (éducateurs, éducatrices spécialisées) et pour les résidences pour aînés (préposés aux bénéficiaires, infirmières auxiliaires, responsables alimentaires, etc.).</p>
                 </div>
+            </div>
 
-                <!-- Job Card 3 -->
-                <div class="job-card" data-category="residences">
-                    <div class="job-badge">Résidences pour aînés</div>
-                    <h3>Préposé(e)s aux bénéficiaires</h3>
-                    <div class="job-meta">
-                        <div class="job-meta-item">📍 Plusieurs régions</div>
-                        <div class="job-meta-item">⏰ Jour / Soir / Nuit</div>
-                    </div>
-                    <p>
-                        Rejoignez notre équipe de préposés aux bénéficiaires dévoués. Nous recherchons 
-                        des candidats passionnés par les soins aux aînés, disponibles pour des 
-                        remplacements flexibles dans nos résidences partenaires.
-                    </p>
-                    <a href="contact.html" class="job-btn">Postuler maintenant →</a>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Quel est le délai de réponse pour une demande?</span>
+                    <span class="faq-icon">+</span>
                 </div>
-
-                <!-- Job Card 4 -->
-                <div class="job-card" data-category="residences">
-                    <div class="job-badge">Résidences pour aînés</div>
-                    <h3>Infirmier(ère)s auxiliaires</h3>
-                    <div class="job-meta">
-                        <div class="job-meta-item">📍 Plusieurs régions</div>
-                        <div class="job-meta-item">⏰ Temps plein / partiel</div>
-                    </div>
-                    <p>
-                        Nous recherchons des infirmières et infirmiers auxiliaires pour des remplacements 
-                        en résidences pour aînés. Excellentes conditions de travail et horaires flexibles.
-                    </p>
-                    <a href="contact.html" class="job-btn">Postuler maintenant →</a>
+                <div class="faq-answer">
+                    <p>Nous nous engageons à vous contacter dans les 30 minutes suivant la réception de votre demande pour confirmer les détails de votre besoin.</p>
                 </div>
+            </div>
 
-                <!-- Job Card 5 -->
-                <div class="job-card" data-category="residences">
-                    <div class="job-badge">Résidences pour aînés</div>
-                    <h3>Responsable alimentaire (cuisinier ou cuisinière)</h3>
-                    <div class="job-meta">
-                        <div class="job-meta-item">📍 Plusieurs régions</div>
-                        <div class="job-meta-item">⏰ Temps plein / partiel</div>
-                    </div>
-                    <p>
-                        L'agence de placement Sagir est à la recherche d'une responsable alimentaire 
-                        (cuisinier ou cuisinière) pour effectuer des remplacements dans nos résidences 
-                        partenaires. Formation et expérience en cuisine institutionnelle requises.
-                    </p>
-                    <a href="contact.html" class="job-btn">Postuler maintenant →</a>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Comment sont vérifiés les candidats?</span>
+                    <span class="faq-icon">+</span>
                 </div>
+                <div class="faq-answer">
+                    <p>Tous nos candidats font l'objet d'une vérification complète des antécédents, qualifications et références avant chaque placement. Nous nous assurons qu'ils possèdent les compétences techniques et humaines nécessaires.</p>
+                </div>
+            </div>
 
-                <!-- Job Card 6 -->
-                <div class="job-card" data-category="sante">
-                    <div class="job-badge">Santé et services sociaux</div>
-                    <h3>Personnel de soutien</h3>
-                    <div class="job-meta">
-                        <div class="job-meta-item">📍 Plusieurs régions</div>
-                        <div class="job-meta-item">⏰ Temps plein / partiel</div>
-                    </div>
-                    <p>
-                        Nous recherchons du personnel de soutien pour diverses missions dans le réseau 
-                        de la santé et des services sociaux. Plusieurs postes disponibles selon vos 
-                        compétences et votre expérience.
-                    </p>
-                    <a href="contact.html" class="job-btn">Postuler maintenant →</a>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Quels sont vos tarifs?</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Nos tarifs varient selon le type de poste et les qualifications requises. Contactez-nous pour obtenir un devis personnalisé. Nous offrons une facturation simplifiée avec une seule facture hebdomadaire claire, sans frais cachés.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Puis-je valider les heures travaillées en ligne?</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Oui, vous pouvez approuver les heures travaillées directement sur notre plateforme en ligne, ce qui facilite la gestion administrative.</p>
                 </div>
             </div>
         </div>
@@ -725,15 +542,9 @@
     <!-- CTA Section -->
     <section class="cta-section">
         <div class="cta-content">
-            <h2>Vous ne trouvez pas le poste idéal?</h2>
-            <p>
-                Envoyez-nous votre candidature spontanée! Nous sommes toujours à la recherche de 
-                nouveaux talents pour rejoindre notre équipe.
-            </p>
-            <div class="cta-buttons">
-                <a href="contact.html" class="btn btn-primary">Envoyer ma candidature</a>
-                <a href="tel:450.313.0465" class="btn btn-secondary">📞 Nous appeler</a>
-            </div>
+            <h2>Vous n'avez pas trouvé votre réponse?</h2>
+            <p>Notre équipe est là pour vous aider. Contactez-nous dès maintenant!</p>
+            <a href="contact.html" class="btn">Nous contacter</a>
         </div>
     </section>
 
@@ -750,28 +561,23 @@
     </footer>
 
     <script>
-        // Filter functionality
-        const filterBtns = document.querySelectorAll('.filter-btn');
-        const jobCards = document.querySelectorAll('.job-card');
+        // FAQ accordion functionality
+        const faqItems = document.querySelectorAll('.faq-item');
 
-        filterBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                // Remove active class from all buttons
-                filterBtns.forEach(b => b.classList.remove('active'));
-                // Add active class to clicked button
-                btn.classList.add('active');
-
-                const filter = btn.getAttribute('data-filter');
-
-                jobCards.forEach(card => {
-                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
-                        card.style.display = 'block';
-                    } else {
-                        card.style.display = 'none';
+        faqItems.forEach(item => {
+            item.addEventListener('click', () => {
+                // Close all other items
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
                     }
                 });
+                
+                // Toggle current item
+                item.classList.toggle('active');
             });
         });
     </script>
+
 </body>
 </html>
