@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Résidences pour Aînés - SAGIR</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(0, 131, 143, 0.85) 0%, rgba(0, 105, 120, 0.85) 100%),
+                        url('/mnt/user-data/uploads/uri_ifs___M_CbWuXYppSbam-POhhSLxyxODitnLUllfePktFARBU_8.webp');
+            background-size: cover;
+            background-position: center;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            color: white;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 40px;
+            width: 100%;
+        }
+
+        .breadcrumb {
+            font-size: 14px;
+            margin-bottom: 24px;
+            opacity: 0.9;
+        }
+
+        .breadcrumb a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.8;
+        }
+
+        .breadcrumb a:hover {
+            opacity: 1;
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: 24px;
+            margin-bottom: 32px;
+            opacity: 0.95;
+            max-width: 700px;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 16px 32px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: white;
+            color: #00838F;
+        }
+
+        .btn-primary:hover {
+            background: #f5f5f5;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: #00838F;
+        }
+
+        /* Introduction Section */
+        .intro-section {
+            padding: 80px 40px;
+            background: #f8f9fa;
+        }
+
+        .intro-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .intro-text h2 {
+            font-size: 40px;
+            color: #002B5C;
+            margin-bottom: 24px;
+            line-height: 1.3;
+        }
+
+        .intro-text p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 16px;
+            line-height: 1.8;
+        }
+
+        .intro-image {
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.1);
+        }
+
+        .intro-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        /* Services Grid */
+        .services-section {
+            padding: 80px 40px;
+            background: white;
+        }
+
+        .services-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 40px;
+            color: #002B5C;
+            margin-bottom: 16px;
+        }
+
+        .section-header p {
+            font-size: 18px;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 32px;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 12px;
+            padding: 40px 32px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border-top: 4px solid #00838F;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 32px rgba(0, 131, 143, 0.15);
+        }
+
+        .service-icon {
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, #00838F 0%, #006978 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            margin-bottom: 24px;
+        }
+
+        .service-card h3 {
+            font-size: 22px;
+            color: #002B5C;
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            color: #666;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        /* Process Section */
+        .process-section {
+            padding: 80px 40px;
+            background: linear-gradient(135deg, #002B5C 0%, #003d7a 100%);
+            color: white;
+        }
+
+        .process-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .process-step {
+            text-align: center;
+            position: relative;
+        }
+
+        .step-number {
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            font-weight: 700;
+            margin: 0 auto 24px;
+            backdrop-filter: blur(10px);
+        }
+
+        .process-step h3 {
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+
+        .process-step p {
+            font-size: 15px;
+            opacity: 0.9;
+            line-height: 1.7;
+        }
+
+        /* Stats Section */
+        .stats-section {
+            padding: 80px 40px;
+            background: #f8f9fa;
+        }
+
+        .stats-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 40px 20px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+        }
+
+        .stat-number {
+            font-size: 56px;
+            font-weight: 700;
+            color: #00838F;
+            margin-bottom: 12px;
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 18px;
+            color: #555;
+            font-weight: 500;
+        }
+
+        /* Why Choose Us */
+        .why-section {
+            padding: 80px 40px;
+            background: white;
+        }
+
+        .why-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            margin-top: 40px;
+        }
+
+        .why-item {
+            display: flex;
+            gap: 20px;
+            padding: 24px;
+            background: #f8f9fa;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .why-item:hover {
+            background: #e3f2fd;
+            transform: translateX(8px);
+        }
+
+        .why-icon {
+            flex-shrink: 0;
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, #00838F 0%, #006978 100%);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+
+        .why-text h3 {
+            font-size: 18px;
+            color: #002B5C;
+            margin-bottom: 8px;
+        }
+
+        .why-text p {
+            font-size: 15px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 100px 40px;
+            background: linear-gradient(135deg, #00838F 0%, #006978 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cta-section h2 {
+            font-size: 42px;
+            margin-bottom: 24px;
+            line-height: 1.3;
+        }
+
+        .cta-section p {
+            font-size: 20px;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero-subtitle {
+                font-size: 18px;
+            }
+
+            .intro-content {
+                grid-template-columns: 1fr;
+            }
+
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-header h2,
+            .intro-text h2 {
+                font-size: 32px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="breadcrumb">
+                <a href="#">Accueil</a> / <span>Résidences pour Aînés</span>
+            </div>
+            <h1>Personnel qualifié pour résidences pour aînés</h1>
+            <p class="hero-subtitle">
+                Trouvez rapidement des professionnels dévoués et qualifiés pour offrir des soins de qualité à vos résidents
+            </p>
+            <div class="hero-cta">
+                <a href="contact.html" class="btn btn-primary">Demander du personnel</a>
+                <a href="#services" class="btn btn-secondary">Nos services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Introduction -->
+    <section class="intro-section">
+        <div class="intro-content">
+            <div class="intro-text">
+                <h2>Votre partenaire de confiance pour le recrutement</h2>
+                <p>
+                    Depuis plus de 15 ans, l'Agence SAGIR se spécialise dans le placement de personnel qualifié 
+                    pour les résidences pour aînés à travers le Québec.
+                </p>
+                <p>
+                    Nous comprenons l'importance d'avoir une équipe dévouée et compétente pour assurer le bien-être 
+                    et la qualité de vie de vos résidents. Notre processus de sélection rigoureux garantit que chaque 
+                    candidat possède les compétences techniques et humaines nécessaires.
+                </p>
+                <p>
+                    <strong>Notre mission :</strong> Faciliter votre gestion des ressources humaines en vous offrant 
+                    un service personnalisé, rapide et efficace.
+                </p>
+            </div>
+            <div class="intro-image">
+                <img src="/mnt/user-data/uploads/uri_ifs___M_CbWuXYppSbam-POhhSLxyxODitnLUllfePktFARBU_8.webp" alt="Soins aux aînés">
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services-section" id="services">
+        <div class="services-content">
+            <div class="section-header">
+                <h2>Personnel spécialisé disponible</h2>
+                <p>Une gamme complète de professionnels pour répondre à tous vos besoins</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">👨‍⚕️</div>
+                    <h3>Préposés aux bénéficiaires</h3>
+                    <p>
+                        Personnel formé et expérimenté pour l'assistance quotidienne, les soins d'hygiène 
+                        et le soutien aux activités de la vie quotidienne.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">💉</div>
+                    <h3>Infirmières et infirmières auxiliaires</h3>
+                    <p>
+                        Professionnels de la santé qualifiés pour la gestion des médicaments, 
+                        les soins médicaux et le suivi de l'état de santé des résidents.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🍽️</div>
+                    <h3>Personnel de cuisine et nutrition</h3>
+                    <p>
+                        Cuisiniers et aides-cuisiniers spécialisés dans les régimes adaptés 
+                        et la préparation de repas nutritifs pour les aînés.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🧹</div>
+                    <h3>Préposés à l'entretien</h3>
+                    <p>
+                        Personnel d'entretien ménager qualifié pour maintenir un environnement 
+                        propre, sain et sécuritaire pour vos résidents.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🎨</div>
+                    <h3>Animateurs et accompagnateurs</h3>
+                    <p>
+                        Professionnels dynamiques pour organiser des activités stimulantes 
+                        et accompagner les résidents dans leurs sorties et loisirs.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">📋</div>
+                    <h3>Personnel administratif</h3>
+                    <p>
+                        Réceptionnistes, coordonnateurs et gestionnaires pour soutenir 
+                        l'administration et la gestion de votre résidence.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process -->
+    <section class="process-section">
+        <div class="process-content">
+            <div class="section-header">
+                <h2>Notre processus simple et efficace</h2>
+                <p>En 4 étapes, nous trouvons le personnel idéal pour votre résidence</p>
+            </div>
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3>Analyse de vos besoins</h3>
+                    <p>Nous écoutons attentivement vos besoins spécifiques et les exigences du poste à combler</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3>Sélection des candidats</h3>
+                    <p>Notre équipe identifie les meilleurs candidats dans notre vaste réseau de professionnels qualifiés</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3>Validation et vérification</h3>
+                    <p>Vérification des références, des qualifications et des antécédents judiciaires</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h3>Placement et suivi</h3>
+                    <p>Intégration du personnel et suivi continu pour assurer votre satisfaction</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats-section">
+        <div class="stats-content">
+            <div class="section-header">
+                <h2>L'Agence SAGIR en chiffres</h2>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">Années d'expérience</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Professionnels placés</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-number">95%</div>
+                    <div class="stat-label">Taux de satisfaction</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-number">24h</div>
+                    <div class="stat-label">Temps de réponse moyen</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-section">
+        <div class="why-content">
+            <div class="section-header">
+                <h2>Pourquoi choisir l'Agence SAGIR?</h2>
+            </div>
+            <div class="why-grid">
+                <div class="why-item">
+                    <div class="why-icon">✓</div>
+                    <div class="why-text">
+                        <h3>Expertise reconnue</h3>
+                        <p>Plus de 15 ans d'expérience dans le placement de personnel pour le secteur des soins aux aînés</p>
+                    </div>
+                </div>
+
+                <div class="why-item">
+                    <div class="why-icon">🎯</div>
+                    <div class="why-text">
+                        <h3>Processus rigoureux</h3>
+                        <p>Sélection minutieuse incluant vérification des antécédents et validation des compétences</p>
+                    </div>
+                </div>
+
+                <div class="why-item">
+                    <div class="why-icon">⚡</div>
+                    <div class="why-text">
+                        <h3>Rapidité d'intervention</h3>
+                        <p>Capacité à répondre rapidement à vos besoins urgents en personnel</p>
+                    </div>
+                </div>
+
+                <div class="why-item">
+                    <div class="why-icon">🤝</div>
+                    <div class="why-text">
+                        <h3>Service personnalisé</h3>
+                        <p>Approche sur mesure adaptée aux besoins spécifiques de votre résidence</p>
+                    </div>
+                </div>
+
+                <div class="why-item">
+                    <div class="why-icon">📞</div>
+                    <div class="why-text">
+                        <h3>Support continu</h3>
+                        <p>Suivi régulier et disponibilité de notre équipe pour assurer votre satisfaction</p>
+                    </div>
+                </div>
+
+                <div class="why-item">
+                    <div class="why-icon">💼</div>
+                    <div class="why-text">
+                        <h3>Vaste réseau</h3>
+                        <p>Accès à un large bassin de candidats qualifiés et disponibles</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="cta-section" id="contact">
+        <div class="cta-content">
+            <h2>Prêt à trouver le personnel idéal pour votre résidence?</h2>
+            <p>Contactez-nous dès aujourd'hui et laissez-nous vous aider à constituer une équipe exceptionnelle</p>
+            <div class="hero-cta" style="justify-content: center;">
+                <a href="contact.html" class="btn btn-primary">Nous contacter</a>
+                <a href="tel:819-123-4567" class="btn btn-secondary">📞 819-123-4567</a>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

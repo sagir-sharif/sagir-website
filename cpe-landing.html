@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services Petite Enfance - CPE & Garderies | SAGIR</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Navigation Menu */
+        .top-bar {
+            background: #f8f9fa;
+            border-bottom: 1px solid #e0e0e0;
+            padding: 8px 0;
+        }
+
+        .top-bar-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            justify-content: flex-end;
+            gap: 24px;
+            font-size: 14px;
+        }
+
+        .top-bar-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #555;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .top-bar-item:hover {
+            color: #002B5C;
+        }
+
+        .main-nav {
+            background: white;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 80px;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .nav-logo-text {
+            font-size: 32px;
+            font-weight: 300;
+            font-style: italic;
+            color: #002B5C;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .nav-item {
+            position: relative;
+        }
+
+        .nav-link {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 12px 20px;
+            color: #333;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            background: #f8f9fa;
+            color: #002B5C;
+        }
+
+        .nav-link.active {
+            color: #002B5C;
+        }
+
+        .nav-dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            min-width: 220px;
+            border-radius: 8px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            margin-top: 8px;
+            padding: 8px;
+        }
+
+        .nav-item:hover .nav-dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .nav-dropdown-item {
+            display: block;
+            padding: 12px 16px;
+            color: #555;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            font-size: 14px;
+        }
+
+        .nav-dropdown-item:hover {
+            background: #f8f9fa;
+            color: #002B5C;
+            transform: translateX(4px);
+        }
+
+        .nav-cta {
+            padding: 12px 28px;
+            background: #002B5C;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-left: 16px;
+        }
+
+        .nav-cta:hover {
+            background: #003d7a;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 43, 92, 0.3);
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: #333;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(124, 179, 66, 0.9) 0%, rgba(104, 159, 56, 0.9) 100%),
+                        url('https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            color: white;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 40px;
+            width: 100%;
+        }
+
+        .breadcrumb {
+            font-size: 14px;
+            margin-bottom: 24px;
+            opacity: 0.9;
+        }
+
+        .breadcrumb a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.8;
+        }
+
+        .breadcrumb a:hover {
+            opacity: 1;
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: 24px;
+            margin-bottom: 32px;
+            opacity: 0.95;
+            max-width: 700px;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 16px 32px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: white;
+            color: #7CB342;
+        }
+
+        .btn-primary:hover {
+            background: #f5f5f5;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: #7CB342;
+        }
+
+        /* Introduction Section */
+        .intro-section {
+            padding: 80px 40px;
+            background: #f8f9fa;
+        }
+
+        .intro-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .intro-text h2 {
+            font-size: 40px;
+            color: #002B5C;
+            margin-bottom: 24px;
+            line-height: 1.3;
+        }
+
+        .intro-text p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 16px;
+            line-height: 1.8;
+        }
+
+        .intro-image {
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.1);
+        }
+
+        .intro-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        /* Personnel Available */
+        .personnel-section {
+            padding: 80px 40px;
+            background: white;
+        }
+
+        .personnel-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 40px;
+            color: #002B5C;
+            margin-bottom: 16px;
+        }
+
+        .section-header p {
+            font-size: 18px;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .personnel-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 32px;
+        }
+
+        .personnel-card {
+            background: white;
+            border-radius: 12px;
+            padding: 40px 32px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border-top: 4px solid #7CB342;
+        }
+
+        .personnel-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 32px rgba(124, 179, 66, 0.15);
+        }
+
+        .personnel-icon {
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, #7CB342 0%, #689F38 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            margin-bottom: 24px;
+        }
+
+        .personnel-card h3 {
+            font-size: 22px;
+            color: #002B5C;
+            margin-bottom: 12px;
+        }
+
+        .personnel-card p {
+            color: #666;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        /* Benefits Section */
+        .benefits-section {
+            padding: 80px 40px;
+            background: #f8f9fa;
+        }
+
+        .benefits-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            margin-top: 40px;
+        }
+
+        .benefit-item {
+            display: flex;
+            gap: 20px;
+            padding: 32px;
+            background: white;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .benefit-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        }
+
+        .benefit-icon {
+            flex-shrink: 0;
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, #7CB342 0%, #689F38 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+        }
+
+        .benefit-text h3 {
+            font-size: 20px;
+            color: #002B5C;
+            margin-bottom: 8px;
+        }
+
+        .benefit-text p {
+            font-size: 15px;
+            color: #666;
+            line-height: 1.7;
+        }
+
+        /* Process Section */
+        .process-section {
+            padding: 80px 40px;
+            background: linear-gradient(135deg, #002B5C 0%, #003d7a 100%);
+            color: white;
+        }
+
+        .process-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .process-step {
+            text-align: center;
+        }
+
+        .step-number {
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            font-weight: 700;
+            margin: 0 auto 24px;
+        }
+
+        .process-step h3 {
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+
+        .process-step p {
+            font-size: 15px;
+            opacity: 0.9;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 100px 40px;
+            background: linear-gradient(135deg, #7CB342 0%, #689F38 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cta-section h2 {
+            font-size: 42px;
+            margin-bottom: 24px;
+        }
+
+        .cta-section p {
+            font-size: 20px;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            .top-bar-content {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero-subtitle {
+                font-size: 18px;
+            }
+
+            .intro-content {
+                grid-template-columns: 1fr;
+            }
+
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-header h2,
+            .intro-text h2 {
+                font-size: 32px;
+            }
+
+            .personnel-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="top-bar-content">
+            <a href="tel:450.313.0465" class="top-bar-item">
+                📞 450.313.0465
+            </a>
+            <a href="mailto:info@agencesagir.com" class="top-bar-item">
+                ✉️ info@agencesagir.com
+            </a>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <div class="nav-logo-text">Sagir</div>
+            </a>
+
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        Intervenant(e)s
+                        <span>▾</span>
+                    </a>
+                    <div class="nav-dropdown">
+                        <a href="#" class="nav-dropdown-item">Postuler</a>
+                        <a href="#" class="nav-dropdown-item">Emplois disponibles</a>
+                        <a href="#" class="nav-dropdown-item">Portail intervenant</a>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link active">
+                        Gestionnaires
+                        <span>▾</span>
+                    </a>
+                    <div class="nav-dropdown">
+                        <a href="#" class="nav-dropdown-item">Services petite enfance</a>
+                        <a href="#" class="nav-dropdown-item">Services résidences aînés</a>
+                        <a href="#" class="nav-dropdown-item">Portail milieu</a>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Emplois Disponibles</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        Qui sommes nous?
+                        <span>▾</span>
+                    </a>
+                    <div class="nav-dropdown">
+                        <a href="#" class="nav-dropdown-item">À propos</a>
+                        <a href="#" class="nav-dropdown-item">Notre équipe</a>
+                        <a href="#" class="nav-dropdown-item">Nos valeurs</a>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+
+            <a href="#" class="nav-cta">CONNEXION</a>
+
+            <button class="mobile-menu-toggle">☰</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="breadcrumb">
+                <a href="#">Accueil</a> / <a href="#">Gestionnaires</a> / <span>Services Petite Enfance</span>
+            </div>
+            <h1>Personnel qualifié pour CPE et garderies</h1>
+            <p class="hero-subtitle">
+                Solutions de remplacement clés en main pour vos besoins en éducation à la petite enfance
+            </p>
+            <div class="hero-cta">
+                <a href="contact.html" class="btn btn-primary">Demander du personnel</a>
+                <a href="#services" class="btn btn-secondary">Nos services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Introduction -->
+    <section class="intro-section">
+        <div class="intro-content">
+            <div class="intro-text">
+                <h2>Votre partenaire de confiance pour le personnel éducatif</h2>
+                <p>
+                    Depuis plus de 15 ans, l'Agence SAGIR se spécialise dans le placement de personnel qualifié 
+                    pour les CPE, garderies et services de garde éducatifs à travers le Québec.
+                </p>
+                <p>
+                    Nous comprenons les défis uniques du secteur de la petite enfance et l'importance d'avoir 
+                    une équipe qualifiée, dévouée et disponible. Notre processus de sélection rigoureux garantit 
+                    que chaque intervenant possède les compétences et l'expérience nécessaires.
+                </p>
+                <p>
+                    <strong>Notre mission :</strong> Faciliter votre gestion des ressources humaines avec un 
+                    service rapide, flexible et personnalisé.
+                </p>
+            </div>
+            <div class="intro-image">
+                <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=800&q=80" alt="Éducation petite enfance">
+            </div>
+        </div>
+    </section>
+
+    <!-- Personnel Available -->
+    <section class="personnel-section" id="services">
+        <div class="personnel-content">
+            <div class="section-header">
+                <h2>Personnel disponible</h2>
+                <p>Une gamme complète de professionnels pour répondre à tous vos besoins</p>
+            </div>
+            <div class="personnel-grid">
+                <div class="personnel-card">
+                    <div class="personnel-icon">👩‍🏫</div>
+                    <h3>Éducatrices à l'enfance</h3>
+                    <p>
+                        Éducatrices qualifiées et expérimentées pour accompagner le développement 
+                        global des enfants dans un environnement stimulant et sécuritaire.
+                    </p>
+                </div>
+
+                <div class="personnel-card">
+                    <div class="personnel-icon">🎨</div>
+                    <h3>Éducatrices spécialisées</h3>
+                    <p>
+                        Personnel formé pour intervenir auprès des enfants ayant des besoins particuliers, 
+                        avec expertise en adaptation et en inclusion.
+                    </p>
+                </div>
+
+                <div class="personnel-card">
+                    <div class="personnel-icon">🍽️</div>
+                    <h3>Responsables alimentaires</h3>
+                    <p>
+                        Personnel qualifié pour la préparation et la gestion des repas, respectant 
+                        les normes d'hygiène et de nutrition pour la petite enfance.
+                    </p>
+                </div>
+
+                <div class="personnel-card">
+                    <div class="personnel-icon">🧹</div>
+                    <h3>Préposés à l'entretien ménager</h3>
+                    <p>
+                        Personnel d'entretien fiable pour maintenir un environnement propre, 
+                        sain et accueillant pour les enfants et le personnel éducatif.
+                    </p>
+                </div>
+
+                <div class="personnel-card">
+                    <div class="personnel-icon">🤝</div>
+                    <h3>Personnel de soutien</h3>
+                    <p>
+                        Assistants et personnel de soutien pour appuyer l'équipe éducative 
+                        dans les activités quotidiennes et les besoins opérationnels.
+                    </p>
+                </div>
+
+                <div class="personnel-card">
+                    <div class="personnel-icon">📋</div>
+                    <h3>Personnel administratif</h3>
+                    <p>
+                        Réceptionnistes et personnel administratif pour soutenir la gestion 
+                        quotidienne de votre établissement.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits-section">
+        <div class="benefits-content">
+            <div class="section-header">
+                <h2>Pourquoi choisir nos services?</h2>
+            </div>
+
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <div class="benefit-icon">⚡</div>
+                    <div class="benefit-text">
+                        <h3>Flexibilité contractuelle</h3>
+                        <p>Aucune garantie d'heures exigée et aucun préavis nécessaire en cas d'arrêt d'un remplacement à durée indéterminée</p>
+                    </div>
+                </div>
+
+                <div class="benefit-item">
+                    <div class="benefit-icon">🎯</div>
+                    <div class="benefit-text">
+                        <h3>Personnel qualifié</h3>
+                        <p>Tous nos intervenants sont qualifiés, vérifiés et possèdent les certifications requises pour travailler en petite enfance</p>
+                    </div>
+                </div>
+
+                <div class="benefit-item">
+                    <div class="benefit-icon">💰</div>
+                    <div class="benefit-text">
+                        <h3>Facturation simplifiée</h3>
+                        <p>Une seule facture hebdomadaire regroupant tous les remplacements, facilitant votre gestion administrative</p>
+                    </div>
+                </div>
+
+                <div class="benefit-item">
+                    <div class="benefit-icon">📞</div>
+                    <div class="benefit-text">
+                        <h3>Disponibilité rapide</h3>
+                        <p>Réponse en moins de 24h pour vos besoins urgents, même pour les remplacements de dernière minute</p>
+                    </div>
+                </div>
+
+                <div class="benefit-item">
+                    <div class="benefit-icon">✓</div>
+                    <div class="benefit-text">
+                        <h3>Processus rigoureux</h3>
+                        <p>Vérification complète des antécédents, références et qualifications avant chaque placement</p>
+                    </div>
+                </div>
+
+                <div class="benefit-item">
+                    <div class="benefit-icon">🤝</div>
+                    <div class="benefit-text">
+                        <h3>Suivi personnalisé</h3>
+                        <p>Un conseiller dédié assure le suivi de vos besoins et la qualité des placements</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section">
+        <div class="process-content">
+            <div class="section-header">
+                <h2>Comment ça fonctionne?</h2>
+                <p>Un processus simple et efficace en 4 étapes</p>
+            </div>
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3>Contactez-nous</h3>
+                    <p>Appelez-nous ou remplissez notre formulaire en ligne pour nous faire part de vos besoins</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3>Sélection du personnel</h3>
+                    <p>Nous identifions rapidement le candidat idéal dans notre réseau de professionnels qualifiés</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3>Validation</h3>
+                    <p>Vérification des qualifications, références et antécédents judiciaires</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h3>Mise en place</h3>
+                    <p>L'intervenant commence le remplacement et nous assurons un suivi continu</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="contact">
+        <div class="cta-content">
+            <h2>Prêt à trouver le personnel idéal pour votre CPE ou garderie?</h2>
+            <p>Contactez-nous dès aujourd'hui et laissez-nous vous aider à maintenir une équipe stable et qualifiée</p>
+            <div class="hero-cta" style="justify-content: center;">
+                <a href="contact.html" class="btn btn-primary">Nous contacter</a>
+                <a href="tel:450.313.0465" class="btn btn-secondary">📞 450.313.0465</a>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
