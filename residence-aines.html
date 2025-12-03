@@ -186,6 +186,44 @@
             transform: translateX(4px);
         }
 
+        .nav-dropdown-group {
+            padding: 8px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .nav-dropdown-group:last-child {
+            border-bottom: none;
+        }
+
+        .nav-dropdown-header {
+            display: block;
+            padding: 10px 16px;
+            color: #002B5C;
+            font-weight: 600;
+            font-size: 14px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .nav-dropdown-header:hover {
+            background: #f0f7ff;
+        }
+
+        .nav-dropdown-subitem {
+            display: block;
+            padding: 8px 16px 8px 32px;
+            color: #666;
+            text-decoration: none;
+            font-size: 13px;
+            transition: all 0.2s ease;
+        }
+
+        .nav-dropdown-subitem:hover {
+            background: #f8f9fa;
+            color: #002B5C;
+            transform: translateX(4px);
+        }
+
         .nav-cta {
             padding: 12px 28px;
             background: #002B5C;
@@ -433,6 +471,14 @@
             padding: 80px 40px;
             background: linear-gradient(135deg, #002B5C 0%, #003d7a 100%);
             color: white;
+        }
+
+        .process-section .section-header h2 {
+            color: white;
+        }
+
+        .process-section .section-header p {
+            color: rgba(255, 255, 255, 0.9);
         }
 
         .process-content {
@@ -782,7 +828,8 @@
                 ✉️ info@sagir.com
             </a>
             <div class="top-bar-social">
-                <a href="https://www.facebook.com/agencesagir" target="_blank" rel="noopener" class="top-bar-social-link" aria-label="Facebook" title="Facebook">f</a>
+                <a href="https://www.facebook.com/communautesagir" target="_blank" rel="noopener" class="top-bar-social-link" aria-label="Facebook" title="Facebook">f</a>
+                <a href="https://www.instagram.com/agence_sagir/" target="_blank" rel="noopener" class="top-bar-social-link" aria-label="Instagram" title="Instagram">📷</a>
                 <a href="https://www.linkedin.com/company/agencesagir" target="_blank" rel="noopener" class="top-bar-social-link" aria-label="LinkedIn" title="LinkedIn">in</a>
             </div>
         </div>
@@ -797,7 +844,30 @@
 
             <ul class="nav-menu">
                 <li class="nav-item">
-                    <a href="emplois-disponibles.html" class="nav-link">Emplois Disponibles</a>
+                    <a href="#" class="nav-link">
+                        Carrières
+                        <span>▾</span>
+                    </a>
+                    <div class="nav-dropdown">
+                        <div class="nav-dropdown-group">
+                            <a href="#" class="nav-dropdown-header">Carrières en petite enfance</a>
+                            <a href="emplois-cpe.html" class="nav-dropdown-subitem">Emplois disponibles</a>
+                            <a href="faq.html" class="nav-dropdown-subitem">FAQ</a>
+                            <a href="#" class="nav-dropdown-subitem">Conditions de travail</a>
+                            <a href="#" class="nav-dropdown-subitem">Conditions d'affectation</a>
+                            <a href="#" class="nav-dropdown-subitem">Processus d'embauche</a>
+                            <a href="#" class="nav-dropdown-subitem">Nouveautés à venir</a>
+                        </div>
+                        <div class="nav-dropdown-group">
+                            <a href="#" class="nav-dropdown-header">Carrières pour les résidences pour aînés</a>
+                            <a href="emplois-residences.html" class="nav-dropdown-subitem">Emplois disponibles</a>
+                            <a href="faq.html" class="nav-dropdown-subitem">FAQ</a>
+                            <a href="#" class="nav-dropdown-subitem">Conditions de travail</a>
+                            <a href="#" class="nav-dropdown-subitem">Conditions d'affectation</a>
+                            <a href="#" class="nav-dropdown-subitem">Processus d'embauche</a>
+                            <a href="#" class="nav-dropdown-subitem">Nouveautés à venir</a>
+                        </div>
+                    </div>
                 </li>
 
                 <li class="nav-item">
@@ -813,10 +883,6 @@
 
                 <li class="nav-item">
                     <a href="qui-sommes-nous.html" class="nav-link">Qui sommes-nous?</a>
-                </li>
-
-                <li class="nav-item">
-                    <a href="faq.html" class="nav-link">FAQ</a>
                 </li>
 
                 <li class="nav-item">
@@ -981,37 +1047,37 @@
                 <div class="process-step">
                     <div class="step-number">1</div>
                     <h3>Connexion au portail</h3>
-                    <p>Accédez à notre plateforme en ligne pour soumettre votre demande de personnel</p>
+                    <p>Accédez à notre plateforme en ligne pour soumettre vos demandes de personnel. Bientôt disponible sous forme d'application.</p>
                 </div>
 
                 <div class="process-step">
                     <div class="step-number">2</div>
-                    <h3>Réception de votre demande</h3>
-                    <p>Notre système reçoit immédiatement votre demande et la transmet à notre équipe</p>
+                    <h3>Soumission de la demande de remplacement</h3>
+                    <p>Notre système reçoit immédiatement votre demande et contacte toutes les ressources répondant à vos critères par message texte et courriel, dans les minutes qui suivent.</p>
                 </div>
 
                 <div class="process-step">
                     <div class="step-number">3</div>
                     <h3>Suivi de votre demande</h3>
-                    <p>Nous vous contactons dans les 30 minutes pour confirmer les détails de votre besoin</p>
+                    <p>Vérifiez le statut en temps réel de votre demande : remplacement à combler, ressources contactées, ressources disponibles, et remplacement comblé ou non-comblé.</p>
                 </div>
 
                 <div class="process-step">
                     <div class="step-number">4</div>
-                    <h3>Choix de l'intervenant et accès au dossier</h3>
-                    <p>Nous identifions le candidat idéal et vous donnons accès à son dossier complet</p>
+                    <h3>Choix de l'intervenant (remplacement déterminé ou indéterminé)</h3>
+                    <p>Nous vous communiquons les ressources disponibles, s'il y a lieu. Vous pouvez refuser ou annuler le remplacement selon vos besoins. Vous aurez également accès aux dossiers consultatifs du personnel.</p>
                 </div>
 
                 <div class="process-step">
                     <div class="step-number">5</div>
-                    <h3>Confirmation de l'intervenant</h3>
-                    <p>Vous validez le choix de l'intervenant et confirmez les détails de la mission</p>
+                    <h3>Confirmation</h3>
+                    <p>Après votre validation, nous confirmons l'affectation de l'intervenant à votre milieu. Le dossier est accessible pour téléchargement et archivage.</p>
                 </div>
 
                 <div class="process-step">
                     <div class="step-number">6</div>
                     <h3>Validation des feuilles de temps</h3>
-                    <p>Vous approuvez les heures travaillées directement sur notre plateforme</p>
+                    <p>Vous approuvez les heures travaillées directement sur la plateforme. Vous pouvez également signaler les retards ou changements d'horaire de dernière minute.</p>
                 </div>
             </div>
         </div>
@@ -1123,7 +1189,8 @@
             <p class="footer-permit">Numéro de permis: AP-2103464</p>
             <p style="margin-top: 8px;">Copyright © Agence de Placement SAGIR Inc.</p>
             <div class="footer-social">
-                <a href="https://www.facebook.com/agencesagir" target="_blank" rel="noopener" class="footer-social-link" aria-label="Facebook" title="Suivez-nous sur Facebook">f</a>
+                <a href="https://www.facebook.com/communautesagir" target="_blank" rel="noopener" class="footer-social-link" aria-label="Facebook" title="Suivez-nous sur Facebook">f</a>
+                <a href="https://www.instagram.com/agence_sagir/" target="_blank" rel="noopener" class="footer-social-link" aria-label="Instagram" title="Suivez-nous sur Instagram">📷</a>
                 <a href="https://www.linkedin.com/company/agencesagir" target="_blank" rel="noopener" class="footer-social-link" aria-label="LinkedIn" title="Suivez-nous sur LinkedIn">in</a>
             </div>
         </div>

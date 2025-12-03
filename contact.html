@@ -187,6 +187,44 @@
             transform: translateX(4px);
         }
 
+        .nav-dropdown-group {
+            padding: 8px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .nav-dropdown-group:last-child {
+            border-bottom: none;
+        }
+
+        .nav-dropdown-header {
+            display: block;
+            padding: 10px 16px;
+            color: #002B5C;
+            font-weight: 600;
+            font-size: 14px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .nav-dropdown-header:hover {
+            background: #f0f7ff;
+        }
+
+        .nav-dropdown-subitem {
+            display: block;
+            padding: 8px 16px 8px 32px;
+            color: #666;
+            text-decoration: none;
+            font-size: 13px;
+            transition: all 0.2s ease;
+        }
+
+        .nav-dropdown-subitem:hover {
+            background: #f8f9fa;
+            color: #002B5C;
+            transform: translateX(4px);
+        }
+
         .nav-cta {
             padding: 12px 28px;
             background: #002B5C;
@@ -742,7 +780,8 @@
                 ✉️ info@agencesagir.com
             </a>
             <div class="top-bar-social">
-                <a href="https://www.facebook.com/agencesagir" target="_blank" rel="noopener" class="top-bar-social-link" aria-label="Facebook" title="Facebook">f</a>
+                <a href="https://www.facebook.com/communautesagir" target="_blank" rel="noopener" class="top-bar-social-link" aria-label="Facebook" title="Facebook">f</a>
+                <a href="https://www.instagram.com/agence_sagir/" target="_blank" rel="noopener" class="top-bar-social-link" aria-label="Instagram" title="Instagram">📷</a>
                 <a href="https://www.linkedin.com/company/agencesagir" target="_blank" rel="noopener" class="top-bar-social-link" aria-label="LinkedIn" title="LinkedIn">in</a>
             </div>
         </div>
@@ -757,7 +796,30 @@
 
             <ul class="nav-menu">
                 <li class="nav-item">
-                    <a href="emplois-disponibles.html" class="nav-link">Emplois Disponibles</a>
+                    <a href="#" class="nav-link">
+                        Carrières
+                        <span>▾</span>
+                    </a>
+                    <div class="nav-dropdown">
+                        <div class="nav-dropdown-group">
+                            <a href="#" class="nav-dropdown-header">Carrières en petite enfance</a>
+                            <a href="emplois-cpe.html" class="nav-dropdown-subitem">Emplois disponibles</a>
+                            <a href="faq.html" class="nav-dropdown-subitem">FAQ</a>
+                            <a href="#" class="nav-dropdown-subitem">Conditions de travail</a>
+                            <a href="#" class="nav-dropdown-subitem">Conditions d'affectation</a>
+                            <a href="#" class="nav-dropdown-subitem">Processus d'embauche</a>
+                            <a href="#" class="nav-dropdown-subitem">Nouveautés à venir</a>
+                        </div>
+                        <div class="nav-dropdown-group">
+                            <a href="#" class="nav-dropdown-header">Carrières pour les résidences pour aînés</a>
+                            <a href="emplois-residences.html" class="nav-dropdown-subitem">Emplois disponibles</a>
+                            <a href="faq.html" class="nav-dropdown-subitem">FAQ</a>
+                            <a href="#" class="nav-dropdown-subitem">Conditions de travail</a>
+                            <a href="#" class="nav-dropdown-subitem">Conditions d'affectation</a>
+                            <a href="#" class="nav-dropdown-subitem">Processus d'embauche</a>
+                            <a href="#" class="nav-dropdown-subitem">Nouveautés à venir</a>
+                        </div>
+                    </div>
                 </li>
 
                 <li class="nav-item">
@@ -773,10 +835,6 @@
 
                 <li class="nav-item">
                     <a href="qui-sommes-nous.html" class="nav-link">Qui sommes-nous?</a>
-                </li>
-
-                <li class="nav-item">
-                    <a href="faq.html" class="nav-link">FAQ</a>
                 </li>
 
                 <li class="nav-item">
@@ -810,11 +868,18 @@
                     <div class="info-item">
                         <div class="info-icon">📍</div>
                         <div class="info-text">
-                            <h3>Adresse</h3>
+                            <h3>Adresses</h3>
                             <p>
-                                AGENCE DE PLACEMENT SAGIR INC.<br>
+                                <strong>Trois-Rivières</strong><br>
+                                105, place René-Lévesque<br>
+                                Trois-Rivières, QC<br>
+                                <em>Sur rendez-vous seulement</em>
+                            </p>
+                            <p style="margin-top: 12px;">
+                                <strong>Mascouche</strong><br>
                                 3235, avenue de la Gare<br>
-                                Mascouche, J7K 3C1
+                                Mascouche, QC J7K 3C1<br>
+                                <em>Sur rendez-vous seulement</em>
                             </p>
                         </div>
                     </div>
@@ -841,15 +906,15 @@
                         <div class="info-text">
                             <h3>Heures d'ouverture</h3>
                             <p>
-                                Lundi - Dimanche: 6h00 - 18h00
+                                7 jours sur 7: 6h00 - 18h00
                             </p>
                         </div>
                     </div>
 
                     <div class="social-links">
-                        <a href="#" class="social-link" aria-label="Facebook">f</a>
-                        <a href="#" class="social-link" aria-label="LinkedIn">in</a>
-                        <a href="#" class="social-link" aria-label="Instagram">📷</a>
+                        <a href="https://www.facebook.com/communautesagir" target="_blank" rel="noopener" class="social-link" aria-label="Facebook">f</a>
+                        <a href="https://www.instagram.com/agence_sagir/" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">📷</a>
+                        <a href="https://www.linkedin.com/company/agencesagir" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">in</a>
                     </div>
                 </div>
             </div>
@@ -857,7 +922,7 @@
             <!-- Right: Contact Form -->
             <div class="contact-form-container">
                 <h2>Envoyez-nous un message</h2>
-                <p>Remplissez le formulaire ci-dessous et nous vous répondrons dans les plus brefs délais.</p>
+                <p>Remplissez le formulaire ci-dessous et nous serons heureux de vous répondre rapidement.</p>
 
                 <form>
                     <div class="form-row">
@@ -886,10 +951,10 @@
                         <label for="subject">Sujet *</label>
                         <select id="subject" name="subject" required>
                             <option value="">Sélectionnez un sujet</option>
-                            <option value="petite-enfance">Services de la petite enfance</option>
-                            <option value="residences">Résidences pour aînés</option>
-                            <option value="candidat">Devenir candidat</option>
-                            <option value="autre">Autre demande</option>
+                            <option value="petite-enfance">Services petite enfance</option>
+                            <option value="residences">Services résidences pour aînés</option>
+                            <option value="recrutement">Être recruté</option>
+                            <option value="autre">Autres</option>
                         </select>
                     </div>
 
@@ -957,7 +1022,8 @@
             <p class="footer-permit">Numéro de permis: AP-2103464</p>
             <p style="margin-top: 8px;">Copyright © Agence de Placement SAGIR Inc.</p>
             <div class="footer-social">
-                <a href="https://www.facebook.com/agencesagir" target="_blank" rel="noopener" class="footer-social-link" aria-label="Facebook" title="Suivez-nous sur Facebook">f</a>
+                <a href="https://www.facebook.com/communautesagir" target="_blank" rel="noopener" class="footer-social-link" aria-label="Facebook" title="Suivez-nous sur Facebook">f</a>
+                <a href="https://www.instagram.com/agence_sagir/" target="_blank" rel="noopener" class="footer-social-link" aria-label="Instagram" title="Suivez-nous sur Instagram">📷</a>
                 <a href="https://www.linkedin.com/company/agencesagir" target="_blank" rel="noopener" class="footer-social-link" aria-label="LinkedIn" title="Suivez-nous sur LinkedIn">in</a>
             </div>
         </div>
