@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emplois Petite Enfance - Agence SAGIR</title>
+    <title>Conditions d'affectation - Agence SAGIR</title>
     <style>
         * {
             margin: 0;
@@ -283,151 +283,135 @@
         .hero p {
             font-size: 20px;
             opacity: 0.95;
-            margin-bottom: 0;
         }
 
-        /* Jobs Section */
-        .jobs-section {
+        /* Content Section */
+        .content-section {
             padding: 80px 40px;
-            background: #f8f9fa;
+            background: white;
         }
 
-        .jobs-container {
-            max-width: 1200px;
+        .content-container {
+            max-width: 1000px;
             margin: 0 auto;
         }
 
-        .section-header {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .section-header h2 {
-            font-size: 40px;
+        .content-section h2 {
+            font-size: 32px;
             color: #002B5C;
-            margin-bottom: 16px;
+            margin-bottom: 24px;
+            margin-top: 40px;
         }
 
-        .section-header p {
-            font-size: 18px;
-            color: #555;
+        .content-section h2:first-child {
+            margin-top: 0;
         }
 
-        /* Filter Section */
-        .filter-section {
-            background: white;
-            padding: 24px;
-            border-radius: 12px;
-            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-            margin-bottom: 40px;
-        }
-
-        .filter-header {
-            font-size: 18px;
-            font-weight: 600;
-            color: #002B5C;
-            margin-bottom: 16px;
-        }
-
-        .filter-options {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
-
-        .filter-btn {
-            padding: 10px 20px;
-            background: #f8f9fa;
-            border: 2px solid #e0e0e0;
-            border-radius: 8px;
-            color: #555;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-size: 15px;
-            font-weight: 500;
-        }
-
-        .filter-btn:hover,
-        .filter-btn.active {
-            background: #002B5C;
-            color: white;
-            border-color: #002B5C;
-        }
-
-        /* Jobs Grid */
-        .jobs-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 30px;
-        }
-
-        .job-card {
-            background: white;
-            border-radius: 12px;
-            padding: 32px;
-            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-            transition: all 0.3s ease;
-            border-top: 4px solid #002B5C;
-        }
-
-        .job-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-        }
-
-        .job-badge {
-            display: inline-block;
-            padding: 6px 12px;
-            background: #e3f2fd;
-            color: #002B5C;
-            border-radius: 6px;
-            font-size: 13px;
-            font-weight: 600;
-            margin-bottom: 16px;
-        }
-
-        .job-card h3 {
+        .content-section h3 {
             font-size: 24px;
             color: #002B5C;
-            margin-bottom: 12px;
-            line-height: 1.3;
+            margin-bottom: 16px;
+            margin-top: 30px;
         }
 
-        .job-card p {
+        .content-section p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .content-section ul {
+            margin: 20px 0 20px 40px;
+            color: #555;
+        }
+
+        .content-section li {
+            font-size: 17px;
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+
+        .info-box {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 24px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+
+        .info-box h3 {
+            color: #856404;
+            font-size: 20px;
+            margin-bottom: 12px;
+            margin-top: 0;
+        }
+
+        .info-box p {
+            margin: 0;
+            color: #856404;
+            font-size: 16px;
+        }
+
+        .highlight-box {
+            background: #e3f2fd;
+            border-left: 4px solid #002B5C;
+            padding: 24px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+
+        .highlight-box h3 {
+            color: #002B5C;
+            font-size: 20px;
+            margin-bottom: 12px;
+            margin-top: 0;
+        }
+
+        .highlight-box p {
+            margin: 0;
             color: #555;
             font-size: 16px;
-            line-height: 1.7;
-            margin-bottom: 20px;
         }
 
-        .job-meta {
-            display: flex;
-            gap: 16px;
-            margin-bottom: 20px;
-            font-size: 14px;
-            color: #666;
+        .step-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
+            margin: 40px 0;
         }
 
-        .job-meta-item {
-            display: flex;
-            align-items: center;
-            gap: 6px;
+        .step-card {
+            background: #f8f9fa;
+            padding: 28px;
+            border-radius: 12px;
+            text-align: center;
         }
 
-        .job-btn {
-            display: inline-block;
-            padding: 12px 24px;
+        .step-number {
+            width: 50px;
+            height: 50px;
             background: #002B5C;
             color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: 600;
-            transition: all 0.3s ease;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin: 0 auto 16px;
         }
 
-        .job-btn:hover {
-            background: #003d7a;
-            transform: translateX(4px);
+        .step-card h3 {
+            font-size: 20px;
+            color: #002B5C;
+            margin-bottom: 12px;
+        }
+
+        .step-card p {
+            font-size: 15px;
+            color: #666;
+            margin: 0;
         }
 
         /* CTA Section */
@@ -444,7 +428,7 @@
         }
 
         .cta-section h2 {
-            font-size: 40px;
+            font-size: 36px;
             margin-bottom: 20px;
         }
 
@@ -452,13 +436,6 @@
             font-size: 18px;
             margin-bottom: 32px;
             opacity: 0.95;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 16px;
-            justify-content: center;
-            flex-wrap: wrap;
         }
 
         .btn {
@@ -471,29 +448,14 @@
             align-items: center;
             gap: 8px;
             transition: all 0.3s ease;
-            cursor: pointer;
-        }
-
-        .btn-primary {
             background: white;
             color: #002B5C;
         }
 
-        .btn-primary:hover {
+        .btn:hover {
             background: #f5f5f5;
             transform: translateY(-2px);
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: white;
-            border: 2px solid white;
-        }
-
-        .btn-secondary:hover {
-            background: white;
-            color: #002B5C;
         }
 
         /* Footer */
@@ -551,25 +513,12 @@
                 font-size: 36px;
             }
 
-            .section-header h2 {
-                font-size: 32px;
+            .content-section h2 {
+                font-size: 28px;
             }
 
-            .jobs-grid {
+            .step-grid {
                 grid-template-columns: 1fr;
-            }
-
-            .cta-section h2 {
-                font-size: 32px;
-            }
-
-            .filter-options {
-                flex-direction: column;
-            }
-
-            .filter-btn {
-                width: 100%;
-                text-align: center;
             }
         }
     </style>
@@ -595,7 +544,7 @@
     <!-- Main Navigation -->
     <nav class="main-nav">
         <div class="nav-container">
-            <a href="/" class="nav-logo">
+            <a href="index.html" class="nav-logo">
                 <img src="images/logo.jpg" alt="Agence SAGIR">
             </a>
 
@@ -656,68 +605,140 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1>Emplois en petite enfance</h1>
-            <p>Venez enrichir notre équipe avec vos compétences et votre passion.</p>
+            <h1>Conditions d'affectation</h1>
+            <p>Comprenez comment fonctionnent vos mandats chez SAGIR</p>
         </div>
     </section>
 
-    <!-- Jobs Section -->
-    <section class="jobs-section">
-        <div class="jobs-container">
-            <div class="section-header">
-                <h2>Remplacements disponibles – Explorez nos mandats temporaires</h2>
-                <p>Découvrez les opportunités de carrière chez SAGIR</p>
-            </div>
+    <!-- Content Section -->
+    <section class="content-section">
+        <div class="content-container">
+            <p>
+                Chez l'Agence SAGIR, nous nous assurons que chaque affectation soit claire, transparente et
+                adaptée à vos compétences et disponibilités. Voici ce que vous devez savoir sur le
+                fonctionnement de vos mandats.
+            </p>
 
-            <!-- Jobs Grid -->
-            <div class="jobs-grid">
-                <!-- Job Card 1 -->
-                <div class="job-card">
-                    <div class="job-badge">Petite enfance</div>
-                    <h3>Éducateurs et éducatrices à l'enfance</h3>
-                    <div class="job-meta">
-                        <div class="job-meta-item">📍 Plusieurs régions</div>
-                        <div class="job-meta-item">⏰ Temps plein / partiel</div>
-                    </div>
-                    <p>
-                        Nous sommes activement à la recherche d'éducateurs et d'éducatrices à l'enfance.
-                        Tu as de l'expérience en CPE ou en garderie? Rejoins notre équipe dynamique pour
-                        des remplacements dans le réseau de la petite enfance.
-                    </p>
-                    <a href="contact.html" class="job-btn">Postuler maintenant →</a>
+            <h2>📋 Comment fonctionnent les affectations</h2>
+
+            <div class="step-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3>Notification</h3>
+                    <p>Vous recevez une offre de mandat par téléphone, SMS ou via notre plateforme selon vos préférences.</p>
                 </div>
-
-                <!-- Job Card 2 -->
-                <div class="job-card">
-                    <div class="job-badge">Petite enfance</div>
-                    <h3>Éducateur ou éducatrice spécialisée</h3>
-                    <div class="job-meta">
-                        <div class="job-meta-item">📍 Plusieurs régions</div>
-                        <div class="job-meta-item">⏰ Temps plein / partiel</div>
-                    </div>
-                    <p>
-                        Tu es passionné(e) par les défis et le potentiel adaptatif humain? Tu es ouvert(e)
-                        d'esprit, créative et dynamique? Tu as une facilité à t'adapter dans différents
-                        milieux? Ce poste est pour toi!
-                    </p>
-                    <a href="contact.html" class="job-btn">Postuler maintenant →</a>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3>Détails du mandat</h3>
+                    <p>Vous obtenez toutes les informations: lieu, horaire, durée, type de poste et rémunération.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3>Confirmation</h3>
+                    <p>Vous acceptez ou refusez le mandat selon vos disponibilités, sans aucune pression.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <h3>Préparation</h3>
+                    <p>Nous vous transmettons tous les détails nécessaires pour vous présenter le jour J.</p>
                 </div>
             </div>
+
+            <h2>⏰ Types d'affectations disponibles</h2>
+
+            <h3>Mandats temporaires</h3>
+            <ul>
+                <li><strong>Remplacements d'urgence:</strong> Disponibilité immédiate, durée de 1 jour à quelques semaines</li>
+                <li><strong>Remplacements planifiés:</strong> Congés de maternité, vacances, formation (plusieurs semaines à plusieurs mois)</li>
+                <li><strong>Mandats saisonniers:</strong> Périodes de pointe, remplacement estival</li>
+                <li><strong>Affectations ponctuelles:</strong> Événements spéciaux, sorties éducatives</li>
+            </ul>
+
+            <h3>Affectations longue durée</h3>
+            <ul>
+                <li><strong>Postes temporaires prolongés:</strong> 3 mois et plus dans le même milieu</li>
+                <li><strong>Opportunités de permanence:</strong> Certains mandats peuvent mener à une embauche permanente</li>
+            </ul>
+
+            <div class="highlight-box">
+                <h3>✨ Votre liberté de choix</h3>
+                <p>
+                    Vous n'êtes jamais obligé d'accepter un mandat. Chez SAGIR, nous respectons vos choix
+                    et vos disponibilités. Refuser un mandat n'affecte pas votre relation avec l'agence ni
+                    les futures opportunités qui vous seront proposées.
+                </p>
+            </div>
+
+            <h2>📍 Lieux d'affectation</h2>
+            <p>
+                Nous desservons plusieurs régions du Québec. Lors de votre inscription, vous indiquez
+                vos zones géographiques préférées et le rayon de déplacement que vous êtes prêt à accepter.
+                Nous respectons ces préférences lors de l'attribution des mandats.
+            </p>
+
+            <h3>Zones couvertes:</h3>
+            <ul>
+                <li>Lanaudière (Mascouche, Terrebonne, Repentigny, etc.)</li>
+                <li>Mauricie (Trois-Rivières et environs)</li>
+                <li>Montréal et régions limitrophes</li>
+                <li>Autres régions selon les besoins</li>
+            </ul>
+
+            <h2>💼 Préparation à votre mandat</h2>
+
+            <h3>Informations fournies avant chaque affectation:</h3>
+            <ul>
+                <li>Nom et adresse complète de l'établissement</li>
+                <li>Personne-ressource et coordonnées</li>
+                <li>Horaire précis et durée du mandat</li>
+                <li>Description du poste et responsabilités</li>
+                <li>Particularités du milieu (s'il y a lieu)</li>
+                <li>Code vestimentaire et règlements spécifiques</li>
+                <li>Informations de stationnement ou transport</li>
+            </ul>
+
+            <div class="info-box">
+                <h3>⚠️ Important</h3>
+                <p>
+                    Une fois un mandat accepté, nous comptons sur votre engagement. En cas d'imprévu,
+                    contactez-nous immédiatement. Une communication transparente est essentielle pour
+                    maintenir la confiance avec nos établissements partenaires et assurer votre réputation
+                    professionnelle.
+                </p>
+            </div>
+
+            <h2>🔄 Fréquence des affectations</h2>
+            <p>
+                La fréquence de vos mandats dépend de:
+            </p>
+            <ul>
+                <li>Vos disponibilités déclarées</li>
+                <li>La demande dans votre secteur géographique</li>
+                <li>Vos qualifications et expérience</li>
+                <li>Les besoins des établissements</li>
+                <li>Votre performance et ponctualité</li>
+            </ul>
+
+            <p>
+                En moyenne, nos employés actifs reçoivent entre 2 et 5 propositions de mandats par semaine,
+                mais cela peut varier considérablement selon les facteurs mentionnés ci-dessus.
+            </p>
+
+            <h2>📞 Soutien pendant vos mandats</h2>
+            <p>
+                Notre équipe est disponible 7 jours sur 7 pendant vos heures d'affectation. Si vous
+                rencontrez un problème ou avez des questions pendant un mandat, n'hésitez pas à nous
+                contacter. Nous sommes là pour vous soutenir et résoudre toute situation rapidement.
+            </p>
         </div>
     </section>
 
     <!-- CTA Section -->
     <section class="cta-section">
         <div class="cta-content">
-            <h2>Vous ne trouvez pas le mandat idéal ?</h2>
-            <p>
-                Envoyez-nous votre candidature spontanée! Nous sommes toujours à la recherche de 
-                nouveaux talents pour rejoindre notre équipe.
-            </p>
-            <div class="cta-buttons">
-                <a href="contact.html" class="btn btn-primary">Envoyer ma candidature</a>
-                <a href="tel:450.313.0465" class="btn btn-secondary">📞 Nous appeler</a>
-            </div>
+            <h2>Des questions sur les affectations?</h2>
+            <p>Notre équipe est là pour vous répondre et vous accompagner</p>
+            <a href="contact.html" class="btn">Nous contacter</a>
         </div>
     </section>
 

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emplois Petite Enfance - Agence SAGIR</title>
+    <title>Processus d'embauche - Agence SAGIR</title>
     <style>
         * {
             margin: 0;
@@ -283,151 +283,159 @@
         .hero p {
             font-size: 20px;
             opacity: 0.95;
-            margin-bottom: 0;
         }
 
-        /* Jobs Section */
-        .jobs-section {
+        /* Content Section */
+        .content-section {
             padding: 80px 40px;
-            background: #f8f9fa;
+            background: white;
         }
 
-        .jobs-container {
-            max-width: 1200px;
+        .content-container {
+            max-width: 1000px;
             margin: 0 auto;
         }
 
-        .section-header {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .section-header h2 {
-            font-size: 40px;
+        .content-section h2 {
+            font-size: 32px;
             color: #002B5C;
-            margin-bottom: 16px;
+            margin-bottom: 24px;
+            margin-top: 40px;
         }
 
-        .section-header p {
+        .content-section h2:first-child {
+            margin-top: 0;
+        }
+
+        .content-section p {
             font-size: 18px;
+            color: #555;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .content-section ul {
+            margin: 20px 0 20px 40px;
             color: #555;
         }
 
-        /* Filter Section */
-        .filter-section {
-            background: white;
-            padding: 24px;
-            border-radius: 12px;
-            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-            margin-bottom: 40px;
+        .content-section li {
+            font-size: 17px;
+            margin-bottom: 12px;
+            line-height: 1.6;
         }
 
-        .filter-header {
-            font-size: 18px;
-            font-weight: 600;
-            color: #002B5C;
-            margin-bottom: 16px;
+        .timeline {
+            position: relative;
+            padding: 40px 0;
         }
 
-        .filter-options {
+        .timeline-item {
             display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
+            gap: 30px;
+            margin-bottom: 50px;
+            position: relative;
         }
 
-        .filter-btn {
-            padding: 10px 20px;
-            background: #f8f9fa;
-            border: 2px solid #e0e0e0;
-            border-radius: 8px;
-            color: #555;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-size: 15px;
-            font-weight: 500;
-        }
-
-        .filter-btn:hover,
-        .filter-btn.active {
+        .timeline-marker {
+            flex-shrink: 0;
+            width: 60px;
+            height: 60px;
             background: #002B5C;
             color: white;
-            border-color: #002B5C;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            box-shadow: 0 4px 12px rgba(0, 43, 92, 0.3);
+            z-index: 1;
         }
 
-        /* Jobs Grid */
-        .jobs-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 30px;
-        }
-
-        .job-card {
-            background: white;
+        .timeline-content {
+            flex: 1;
+            background: #f8f9fa;
+            padding: 28px;
             border-radius: 12px;
-            padding: 32px;
-            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-            transition: all 0.3s ease;
-            border-top: 4px solid #002B5C;
+            border-left: 4px solid #002B5C;
         }
 
-        .job-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-        }
-
-        .job-badge {
-            display: inline-block;
-            padding: 6px 12px;
-            background: #e3f2fd;
-            color: #002B5C;
-            border-radius: 6px;
-            font-size: 13px;
-            font-weight: 600;
-            margin-bottom: 16px;
-        }
-
-        .job-card h3 {
+        .timeline-content h3 {
             font-size: 24px;
             color: #002B5C;
             margin-bottom: 12px;
-            line-height: 1.3;
         }
 
-        .job-card p {
-            color: #555;
+        .timeline-content p {
+            margin-bottom: 12px;
             font-size: 16px;
-            line-height: 1.7;
-            margin-bottom: 20px;
         }
 
-        .job-meta {
-            display: flex;
-            gap: 16px;
-            margin-bottom: 20px;
-            font-size: 14px;
-            color: #666;
+        .timeline-content ul {
+            margin: 16px 0 0 20px;
         }
 
-        .job-meta-item {
-            display: flex;
-            align-items: center;
-            gap: 6px;
+        .timeline-content li {
+            font-size: 15px;
+            margin-bottom: 8px;
         }
 
-        .job-btn {
-            display: inline-block;
-            padding: 12px 24px;
-            background: #002B5C;
-            color: white;
-            text-decoration: none;
+        .info-box {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 24px;
             border-radius: 8px;
-            font-weight: 600;
-            transition: all 0.3s ease;
+            margin: 30px 0;
         }
 
-        .job-btn:hover {
-            background: #003d7a;
-            transform: translateX(4px);
+        .info-box h3 {
+            color: #2e7d32;
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+
+        .info-box p {
+            margin: 0;
+            color: #2e7d32;
+            font-size: 16px;
+        }
+
+        .checklist {
+            background: #fff3cd;
+            padding: 28px;
+            border-radius: 12px;
+            border-left: 4px solid #ffc107;
+            margin: 30px 0;
+        }
+
+        .checklist h3 {
+            color: #856404;
+            font-size: 22px;
+            margin-bottom: 16px;
+        }
+
+        .checklist ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .checklist li {
+            padding-left: 32px;
+            position: relative;
+            margin-bottom: 12px;
+            color: #856404;
+            font-size: 16px;
+        }
+
+        .checklist li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #ffc107;
+            font-size: 20px;
+            font-weight: bold;
         }
 
         /* CTA Section */
@@ -444,7 +452,7 @@
         }
 
         .cta-section h2 {
-            font-size: 40px;
+            font-size: 36px;
             margin-bottom: 20px;
         }
 
@@ -452,13 +460,6 @@
             font-size: 18px;
             margin-bottom: 32px;
             opacity: 0.95;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 16px;
-            justify-content: center;
-            flex-wrap: wrap;
         }
 
         .btn {
@@ -471,29 +472,14 @@
             align-items: center;
             gap: 8px;
             transition: all 0.3s ease;
-            cursor: pointer;
-        }
-
-        .btn-primary {
             background: white;
             color: #002B5C;
         }
 
-        .btn-primary:hover {
+        .btn:hover {
             background: #f5f5f5;
             transform: translateY(-2px);
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: white;
-            border: 2px solid white;
-        }
-
-        .btn-secondary:hover {
-            background: white;
-            color: #002B5C;
         }
 
         /* Footer */
@@ -551,25 +537,19 @@
                 font-size: 36px;
             }
 
-            .section-header h2 {
-                font-size: 32px;
+            .content-section h2 {
+                font-size: 28px;
             }
 
-            .jobs-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .cta-section h2 {
-                font-size: 32px;
-            }
-
-            .filter-options {
+            .timeline-item {
                 flex-direction: column;
+                gap: 20px;
             }
 
-            .filter-btn {
-                width: 100%;
-                text-align: center;
+            .timeline-marker {
+                width: 50px;
+                height: 50px;
+                font-size: 20px;
             }
         }
     </style>
@@ -595,7 +575,7 @@
     <!-- Main Navigation -->
     <nav class="main-nav">
         <div class="nav-container">
-            <a href="/" class="nav-logo">
+            <a href="index.html" class="nav-logo">
                 <img src="images/logo.jpg" alt="Agence SAGIR">
             </a>
 
@@ -656,68 +636,186 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1>Emplois en petite enfance</h1>
-            <p>Venez enrichir notre équipe avec vos compétences et votre passion.</p>
+            <h1>Processus d'embauche</h1>
+            <p>Un processus simple, rapide et transparent pour rejoindre notre équipe</p>
         </div>
     </section>
 
-    <!-- Jobs Section -->
-    <section class="jobs-section">
-        <div class="jobs-container">
-            <div class="section-header">
-                <h2>Remplacements disponibles – Explorez nos mandats temporaires</h2>
-                <p>Découvrez les opportunités de carrière chez SAGIR</p>
-            </div>
+    <!-- Content Section -->
+    <section class="content-section">
+        <div class="content-container">
+            <p>
+                Chez l'Agence SAGIR, nous avons conçu un processus d'embauche simplifié et efficace pour
+                vous permettre de commencer à travailler rapidement. Voici les étapes détaillées de votre
+                parcours d'intégration.
+            </p>
 
-            <!-- Jobs Grid -->
-            <div class="jobs-grid">
-                <!-- Job Card 1 -->
-                <div class="job-card">
-                    <div class="job-badge">Petite enfance</div>
-                    <h3>Éducateurs et éducatrices à l'enfance</h3>
-                    <div class="job-meta">
-                        <div class="job-meta-item">📍 Plusieurs régions</div>
-                        <div class="job-meta-item">⏰ Temps plein / partiel</div>
+            <h2>📝 Les étapes du processus</h2>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker">1</div>
+                    <div class="timeline-content">
+                        <h3>Candidature</h3>
+                        <p>Soumettez votre candidature via:</p>
+                        <ul>
+                            <li>Notre formulaire en ligne sur le site web</li>
+                            <li>Par courriel à info@sagir.com</li>
+                            <li>En personne à l'un de nos bureaux</li>
+                            <li>Par téléphone au 450.313.0465</li>
+                        </ul>
+                        <p><strong>Documents requis:</strong> CV à jour, copie de votre diplôme et attestations pertinentes</p>
                     </div>
-                    <p>
-                        Nous sommes activement à la recherche d'éducateurs et d'éducatrices à l'enfance.
-                        Tu as de l'expérience en CPE ou en garderie? Rejoins notre équipe dynamique pour
-                        des remplacements dans le réseau de la petite enfance.
-                    </p>
-                    <a href="contact.html" class="job-btn">Postuler maintenant →</a>
                 </div>
 
-                <!-- Job Card 2 -->
-                <div class="job-card">
-                    <div class="job-badge">Petite enfance</div>
-                    <h3>Éducateur ou éducatrice spécialisée</h3>
-                    <div class="job-meta">
-                        <div class="job-meta-item">📍 Plusieurs régions</div>
-                        <div class="job-meta-item">⏰ Temps plein / partiel</div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">2</div>
+                    <div class="timeline-content">
+                        <h3>Première prise de contact</h3>
+                        <p>Dans les <strong>24 à 48 heures</strong>, un recruteur vous contactera pour:</p>
+                        <ul>
+                            <li>Valider votre intérêt et disponibilités</li>
+                            <li>Discuter de vos qualifications et expérience</li>
+                            <li>Répondre à vos questions initiales</li>
+                            <li>Planifier une entrevue si votre profil correspond</li>
+                        </ul>
                     </div>
-                    <p>
-                        Tu es passionné(e) par les défis et le potentiel adaptatif humain? Tu es ouvert(e)
-                        d'esprit, créative et dynamique? Tu as une facilité à t'adapter dans différents
-                        milieux? Ce poste est pour toi!
-                    </p>
-                    <a href="contact.html" class="job-btn">Postuler maintenant →</a>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker">3</div>
+                    <div class="timeline-content">
+                        <h3>Entrevue</h3>
+                        <p>Rencontre avec notre équipe (en personne ou virtuelle) pour:</p>
+                        <ul>
+                            <li>Discuter de votre expérience professionnelle</li>
+                            <li>Comprendre vos objectifs de carrière</li>
+                            <li>Évaluer vos compétences et qualifications</li>
+                            <li>Expliquer en détail le fonctionnement de l'agence</li>
+                            <li>Répondre à toutes vos questions</li>
+                        </ul>
+                        <p><strong>Durée:</strong> Environ 30 à 45 minutes</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker">4</div>
+                    <div class="timeline-content">
+                        <h3>Vérifications d'usage</h3>
+                        <p>Pour assurer la sécurité dans nos milieux de travail, nous procédons à:</p>
+                        <ul>
+                            <li><strong>Vérification des antécédents judiciaires</strong> (obligatoire pour travailler avec des enfants ou personnes vulnérables)</li>
+                            <li><strong>Validation des références professionnelles</strong></li>
+                            <li><strong>Vérification de vos diplômes et certifications</strong></li>
+                            <li><strong>Confirmation de votre droit de travailler au Canada</strong></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker">5</div>
+                    <div class="timeline-content">
+                        <h3>Signature des documents</h3>
+                        <p>Une fois accepté, vous complétez:</p>
+                        <ul>
+                            <li>Contrat de travail</li>
+                            <li>Formulaires gouvernementaux (impôts, CNESST)</li>
+                            <li>Informations bancaires pour le dépôt direct</li>
+                            <li>Déclaration de vos disponibilités</li>
+                            <li>Consentements et politiques de l'agence</li>
+                        </ul>
+                        <p><strong>Format:</strong> Documents électroniques ou en personne selon votre préférence</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker">6</div>
+                    <div class="timeline-content">
+                        <h3>Formation et intégration</h3>
+                        <p>Avant votre premier mandat:</p>
+                        <ul>
+                            <li>Formation sur nos systèmes et processus</li>
+                            <li>Présentation de notre plateforme technologique</li>
+                            <li>Explication des politiques et procédures</li>
+                            <li>Remise de votre guide d'employé</li>
+                            <li>Attribution de votre conseiller dédié</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker">7</div>
+                    <div class="timeline-content">
+                        <h3>Premier mandat</h3>
+                        <p>Vous êtes prêt à commencer!</p>
+                        <ul>
+                            <li>Vous recevrez des propositions de mandats selon vos disponibilités</li>
+                            <li>Soutien renforcé lors de vos premières affectations</li>
+                            <li>Suivi personnalisé par votre conseiller</li>
+                            <li>Évaluation après les premiers mandats</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
+
+            <div class="info-box">
+                <h3>⚡ Délai moyen du processus</h3>
+                <p>
+                    De la candidature au premier mandat: généralement <strong>5 à 10 jours ouvrables</strong>,
+                    selon la rapidité à laquelle vous fournissez les documents requis et la disponibilité
+                    des vérifications d'antécédents.
+                </p>
+            </div>
+
+            <h2>📋 Documents à préparer</h2>
+
+            <div class="checklist">
+                <h3>Liste de vérification complète</h3>
+                <ul>
+                    <li>Curriculum vitae à jour</li>
+                    <li>Copie de votre diplôme d'études</li>
+                    <li>Certificat de premiers soins (si applicable)</li>
+                    <li>Preuve de citoyenneté ou permis de travail</li>
+                    <li>Numéro d'assurance sociale</li>
+                    <li>Coordonnées bancaires pour dépôt direct</li>
+                    <li>Liste de 2-3 références professionnelles</li>
+                    <li>Attestations de formation continue (si applicable)</li>
+                    <li>Carte d'ordre professionnel (si applicable)</li>
+                    <li>Preuve de vaccination (selon les exigences)</li>
+                </ul>
+            </div>
+
+            <h2>💡 Conseils pour réussir votre entrevue</h2>
+            <ul>
+                <li><strong>Soyez ponctuel:</strong> Arrivez 10 minutes à l'avance ou connectez-vous à l'heure pour une entrevue virtuelle</li>
+                <li><strong>Préparez vos questions:</strong> Montrez votre intérêt en posant des questions pertinentes</li>
+                <li><strong>Soyez honnête:</strong> Sur vos compétences, votre expérience et vos disponibilités</li>
+                <li><strong>Soignez votre présentation:</strong> Tenue professionnelle appropriée</li>
+                <li><strong>Préparez des exemples concrets:</strong> De situations vécues qui démontrent vos compétences</li>
+            </ul>
+
+            <h2>❓ Questions fréquentes sur le processus</h2>
+
+            <p><strong>Combien de temps prend une vérification d'antécédents?</strong></p>
+            <p>Généralement 3 à 5 jours ouvrables. Nous vous guiderons dans le processus pour l'accélérer.</p>
+
+            <p><strong>Y a-t-il des frais pour postuler?</strong></p>
+            <p>Aucun frais. Notre processus d'embauche est complètement gratuit pour les candidats.</p>
+
+            <p><strong>Puis-je travailler en attendant la vérification d'antécédents?</strong></p>
+            <p>Non, cette vérification est obligatoire avant tout début de mandat dans les milieux réglementés.</p>
+
+            <p><strong>Que se passe-t-il si je ne suis pas sélectionné?</strong></p>
+            <p>Nous conservons votre dossier et pouvons vous recontacter si un poste correspondant mieux à votre profil devient disponible.</p>
         </div>
     </section>
 
     <!-- CTA Section -->
     <section class="cta-section">
         <div class="cta-content">
-            <h2>Vous ne trouvez pas le mandat idéal ?</h2>
-            <p>
-                Envoyez-nous votre candidature spontanée! Nous sommes toujours à la recherche de 
-                nouveaux talents pour rejoindre notre équipe.
-            </p>
-            <div class="cta-buttons">
-                <a href="contact.html" class="btn btn-primary">Envoyer ma candidature</a>
-                <a href="tel:450.313.0465" class="btn btn-secondary">📞 Nous appeler</a>
-            </div>
+            <h2>Prêt à commencer?</h2>
+            <p>Lancez votre processus d'embauche dès aujourd'hui</p>
+            <a href="contact.html" class="btn">Postuler maintenant</a>
         </div>
     </section>
 

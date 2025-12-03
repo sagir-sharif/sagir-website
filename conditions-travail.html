@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emplois Petite Enfance - Agence SAGIR</title>
+    <title>Conditions de travail - Agence SAGIR</title>
     <style>
         * {
             margin: 0;
@@ -283,151 +283,88 @@
         .hero p {
             font-size: 20px;
             opacity: 0.95;
-            margin-bottom: 0;
         }
 
-        /* Jobs Section */
-        .jobs-section {
+        /* Content Section */
+        .content-section {
             padding: 80px 40px;
-            background: #f8f9fa;
+            background: white;
         }
 
-        .jobs-container {
-            max-width: 1200px;
+        .content-container {
+            max-width: 1000px;
             margin: 0 auto;
         }
 
-        .section-header {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .section-header h2 {
-            font-size: 40px;
+        .content-section h2 {
+            font-size: 32px;
             color: #002B5C;
-            margin-bottom: 16px;
+            margin-bottom: 24px;
+            margin-top: 40px;
         }
 
-        .section-header p {
+        .content-section h2:first-child {
+            margin-top: 0;
+        }
+
+        .content-section p {
             font-size: 18px;
             color: #555;
+            margin-bottom: 20px;
+            line-height: 1.8;
         }
 
-        /* Filter Section */
-        .filter-section {
-            background: white;
-            padding: 24px;
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .benefit-card {
+            background: #f8f9fa;
+            padding: 32px;
             border-radius: 12px;
-            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-            margin-bottom: 40px;
+            border-left: 4px solid #002B5C;
         }
 
-        .filter-header {
-            font-size: 18px;
-            font-weight: 600;
+        .benefit-card h3 {
+            font-size: 22px;
             color: #002B5C;
-            margin-bottom: 16px;
-        }
-
-        .filter-options {
+            margin-bottom: 12px;
             display: flex;
-            flex-wrap: wrap;
+            align-items: center;
             gap: 12px;
         }
 
-        .filter-btn {
-            padding: 10px 20px;
-            background: #f8f9fa;
-            border: 2px solid #e0e0e0;
-            border-radius: 8px;
-            color: #555;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-size: 15px;
-            font-weight: 500;
+        .benefit-card p {
+            font-size: 16px;
+            color: #666;
+            margin: 0;
         }
 
-        .filter-btn:hover,
-        .filter-btn.active {
-            background: #002B5C;
-            color: white;
-            border-color: #002B5C;
+        .benefit-icon {
+            font-size: 28px;
         }
 
-        /* Jobs Grid */
-        .jobs-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 30px;
-        }
-
-        .job-card {
-            background: white;
-            border-radius: 12px;
-            padding: 32px;
-            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-            transition: all 0.3s ease;
-            border-top: 4px solid #002B5C;
-        }
-
-        .job-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-        }
-
-        .job-badge {
-            display: inline-block;
-            padding: 6px 12px;
+        .info-box {
             background: #e3f2fd;
-            color: #002B5C;
-            border-radius: 6px;
-            font-size: 13px;
-            font-weight: 600;
-            margin-bottom: 16px;
+            border-left: 4px solid #002B5C;
+            padding: 24px;
+            border-radius: 8px;
+            margin: 30px 0;
         }
 
-        .job-card h3 {
-            font-size: 24px;
+        .info-box h3 {
             color: #002B5C;
+            font-size: 20px;
             margin-bottom: 12px;
-            line-height: 1.3;
         }
 
-        .job-card p {
+        .info-box p {
+            margin: 0;
             color: #555;
             font-size: 16px;
-            line-height: 1.7;
-            margin-bottom: 20px;
-        }
-
-        .job-meta {
-            display: flex;
-            gap: 16px;
-            margin-bottom: 20px;
-            font-size: 14px;
-            color: #666;
-        }
-
-        .job-meta-item {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .job-btn {
-            display: inline-block;
-            padding: 12px 24px;
-            background: #002B5C;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-
-        .job-btn:hover {
-            background: #003d7a;
-            transform: translateX(4px);
         }
 
         /* CTA Section */
@@ -444,7 +381,7 @@
         }
 
         .cta-section h2 {
-            font-size: 40px;
+            font-size: 36px;
             margin-bottom: 20px;
         }
 
@@ -452,13 +389,6 @@
             font-size: 18px;
             margin-bottom: 32px;
             opacity: 0.95;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 16px;
-            justify-content: center;
-            flex-wrap: wrap;
         }
 
         .btn {
@@ -471,29 +401,14 @@
             align-items: center;
             gap: 8px;
             transition: all 0.3s ease;
-            cursor: pointer;
-        }
-
-        .btn-primary {
             background: white;
             color: #002B5C;
         }
 
-        .btn-primary:hover {
+        .btn:hover {
             background: #f5f5f5;
             transform: translateY(-2px);
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: white;
-            border: 2px solid white;
-        }
-
-        .btn-secondary:hover {
-            background: white;
-            color: #002B5C;
         }
 
         /* Footer */
@@ -551,25 +466,12 @@
                 font-size: 36px;
             }
 
-            .section-header h2 {
-                font-size: 32px;
+            .content-section h2 {
+                font-size: 28px;
             }
 
-            .jobs-grid {
+            .benefits-grid {
                 grid-template-columns: 1fr;
-            }
-
-            .cta-section h2 {
-                font-size: 32px;
-            }
-
-            .filter-options {
-                flex-direction: column;
-            }
-
-            .filter-btn {
-                width: 100%;
-                text-align: center;
             }
         }
     </style>
@@ -595,7 +497,7 @@
     <!-- Main Navigation -->
     <nav class="main-nav">
         <div class="nav-container">
-            <a href="/" class="nav-logo">
+            <a href="index.html" class="nav-logo">
                 <img src="images/logo.jpg" alt="Agence SAGIR">
             </a>
 
@@ -656,68 +558,95 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1>Emplois en petite enfance</h1>
-            <p>Venez enrichir notre équipe avec vos compétences et votre passion.</p>
+            <h1>Conditions de travail</h1>
+            <p>Découvrez les avantages et conditions qui font de SAGIR un employeur de choix</p>
         </div>
     </section>
 
-    <!-- Jobs Section -->
-    <section class="jobs-section">
-        <div class="jobs-container">
-            <div class="section-header">
-                <h2>Remplacements disponibles – Explorez nos mandats temporaires</h2>
-                <p>Découvrez les opportunités de carrière chez SAGIR</p>
+    <!-- Content Section -->
+    <section class="content-section">
+        <div class="content-container">
+            <p>
+                Chez l'Agence SAGIR, nous comprenons que des conditions de travail optimales sont essentielles
+                pour attirer et retenir les meilleurs talents. C'est pourquoi nous nous engageons à offrir
+                un environnement professionnel respectueux, flexible et enrichissant.
+            </p>
+
+            <h2>💼 Rémunération compétitive</h2>
+            <p>
+                Nous offrons des salaires concurrentiels alignés sur les standards de l'industrie et adaptés
+                à votre expérience et vos qualifications. Votre rémunération est versée de manière régulière
+                et ponctuelle, avec tous les avantages prévus par la loi.
+            </p>
+
+            <h2>📅 Flexibilité d'horaire</h2>
+            <p>
+                Nous respectons votre besoin d'équilibre entre vie professionnelle et vie personnelle.
+                Choisissez des mandats qui correspondent à vos disponibilités, que vous préfériez travailler
+                à temps plein, à temps partiel, ou sur appel selon vos besoins.
+            </p>
+
+            <h2>Avantages sociaux</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <h3><span class="benefit-icon">🏥</span> Assurances collectives</h3>
+                    <p>Accès à des assurances santé et dentaire pour vous et votre famille après la période d'admissibilité.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3><span class="benefit-icon">📚</span> Formation continue</h3>
+                    <p>Possibilités de perfectionnement professionnel et accès à des formations spécialisées.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3><span class="benefit-icon">⏰</span> Horaires flexibles</h3>
+                    <p>Choisissez vos disponibilités et acceptez les mandats qui vous conviennent.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3><span class="benefit-icon">🎯</span> Variété des mandats</h3>
+                    <p>Diversifiez votre expérience en travaillant dans différents milieux et établissements.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3><span class="benefit-icon">👥</span> Soutien professionnel</h3>
+                    <p>Une équipe dédiée disponible 7 jours sur 7 pour vous accompagner dans vos mandats.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3><span class="benefit-icon">💳</span> Paiement rapide</h3>
+                    <p>Paie hebdomadaire par dépôt direct pour votre tranquillité d'esprit.</p>
+                </div>
             </div>
 
-            <!-- Jobs Grid -->
-            <div class="jobs-grid">
-                <!-- Job Card 1 -->
-                <div class="job-card">
-                    <div class="job-badge">Petite enfance</div>
-                    <h3>Éducateurs et éducatrices à l'enfance</h3>
-                    <div class="job-meta">
-                        <div class="job-meta-item">📍 Plusieurs régions</div>
-                        <div class="job-meta-item">⏰ Temps plein / partiel</div>
-                    </div>
-                    <p>
-                        Nous sommes activement à la recherche d'éducateurs et d'éducatrices à l'enfance.
-                        Tu as de l'expérience en CPE ou en garderie? Rejoins notre équipe dynamique pour
-                        des remplacements dans le réseau de la petite enfance.
-                    </p>
-                    <a href="contact.html" class="job-btn">Postuler maintenant →</a>
-                </div>
+            <h2>🛡️ Environnement de travail sécuritaire</h2>
+            <p>
+                La santé et la sécurité de notre personnel sont nos priorités. Nous veillons à ce que tous
+                nos milieux de travail respectent les normes de santé et sécurité au travail. Vous bénéficiez
+                également de la CNESST et des protections légales applicables.
+            </p>
 
-                <!-- Job Card 2 -->
-                <div class="job-card">
-                    <div class="job-badge">Petite enfance</div>
-                    <h3>Éducateur ou éducatrice spécialisée</h3>
-                    <div class="job-meta">
-                        <div class="job-meta-item">📍 Plusieurs régions</div>
-                        <div class="job-meta-item">⏰ Temps plein / partiel</div>
-                    </div>
-                    <p>
-                        Tu es passionné(e) par les défis et le potentiel adaptatif humain? Tu es ouvert(e)
-                        d'esprit, créative et dynamique? Tu as une facilité à t'adapter dans différents
-                        milieux? Ce poste est pour toi!
-                    </p>
-                    <a href="contact.html" class="job-btn">Postuler maintenant →</a>
-                </div>
+            <div class="info-box">
+                <h3>✨ Ce qui nous distingue</h3>
+                <p>
+                    Contrairement à d'autres agences, SAGIR valorise la relation humaine et le bien-être
+                    de ses employés. Nous ne sommes pas qu'une agence de placement, nous sommes votre
+                    partenaire de carrière. Notre équipe est toujours disponible pour vous écouter,
+                    vous conseiller et vous accompagner dans votre développement professionnel.
+                </p>
             </div>
+
+            <h2>🌟 Reconnaissance et évolution</h2>
+            <p>
+                Votre travail et votre dévouement sont reconnus chez SAGIR. Les employés performants
+                bénéficient de priorité pour les meilleurs mandats et ont accès à des opportunités
+                d'avancement. Nous croyons en la valorisation de nos talents et en leur progression
+                professionnelle.
+            </p>
         </div>
     </section>
 
     <!-- CTA Section -->
     <section class="cta-section">
         <div class="cta-content">
-            <h2>Vous ne trouvez pas le mandat idéal ?</h2>
-            <p>
-                Envoyez-nous votre candidature spontanée! Nous sommes toujours à la recherche de 
-                nouveaux talents pour rejoindre notre équipe.
-            </p>
-            <div class="cta-buttons">
-                <a href="contact.html" class="btn btn-primary">Envoyer ma candidature</a>
-                <a href="tel:450.313.0465" class="btn btn-secondary">📞 Nous appeler</a>
-            </div>
+            <h2>Prêt à rejoindre notre équipe?</h2>
+            <p>Découvrez les opportunités qui vous attendent chez SAGIR</p>
+            <a href="contact.html" class="btn">Postuler maintenant</a>
         </div>
     </section>
 

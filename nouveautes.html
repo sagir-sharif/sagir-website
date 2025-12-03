@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emplois Petite Enfance - Agence SAGIR</title>
+    <title>Nouveautés à venir - Agence SAGIR</title>
     <style>
         * {
             margin: 0;
@@ -283,151 +283,134 @@
         .hero p {
             font-size: 20px;
             opacity: 0.95;
-            margin-bottom: 0;
         }
 
-        /* Jobs Section */
-        .jobs-section {
+        /* Content Section */
+        .content-section {
             padding: 80px 40px;
-            background: #f8f9fa;
+            background: white;
         }
 
-        .jobs-container {
-            max-width: 1200px;
+        .content-container {
+            max-width: 1000px;
             margin: 0 auto;
         }
 
-        .section-header {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .section-header h2 {
-            font-size: 40px;
+        .content-section h2 {
+            font-size: 32px;
             color: #002B5C;
-            margin-bottom: 16px;
+            margin-bottom: 24px;
+            margin-top: 40px;
         }
 
-        .section-header p {
+        .content-section h2:first-child {
+            margin-top: 0;
+        }
+
+        .content-section p {
             font-size: 18px;
             color: #555;
+            margin-bottom: 20px;
+            line-height: 1.8;
         }
 
-        /* Filter Section */
-        .filter-section {
-            background: white;
-            padding: 24px;
-            border-radius: 12px;
-            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-            margin-bottom: 40px;
-        }
-
-        .filter-header {
-            font-size: 18px;
-            font-weight: 600;
-            color: #002B5C;
-            margin-bottom: 16px;
-        }
-
-        .filter-options {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
-
-        .filter-btn {
-            padding: 10px 20px;
-            background: #f8f9fa;
-            border: 2px solid #e0e0e0;
-            border-radius: 8px;
-            color: #555;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-size: 15px;
-            font-weight: 500;
-        }
-
-        .filter-btn:hover,
-        .filter-btn.active {
-            background: #002B5C;
-            color: white;
-            border-color: #002B5C;
-        }
-
-        /* Jobs Grid */
-        .jobs-grid {
+        .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+            margin: 40px 0;
         }
 
-        .job-card {
-            background: white;
-            border-radius: 12px;
-            padding: 32px;
-            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+        .feature-card {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 36px;
+            border-radius: 16px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
             transition: all 0.3s ease;
             border-top: 4px solid #002B5C;
         }
 
-        .job-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
         }
 
-        .job-badge {
+        .feature-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .feature-badge {
             display: inline-block;
-            padding: 6px 12px;
-            background: #e3f2fd;
-            color: #002B5C;
-            border-radius: 6px;
-            font-size: 13px;
+            background: #002B5C;
+            color: white;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 12px;
             font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
             margin-bottom: 16px;
         }
 
-        .job-card h3 {
+        .feature-card h3 {
             font-size: 24px;
             color: #002B5C;
             margin-bottom: 12px;
-            line-height: 1.3;
         }
 
-        .job-card p {
-            color: #555;
+        .feature-card p {
             font-size: 16px;
+            color: #666;
+            margin: 0;
             line-height: 1.7;
-            margin-bottom: 20px;
         }
 
-        .job-meta {
-            display: flex;
-            gap: 16px;
-            margin-bottom: 20px;
-            font-size: 14px;
+        .feature-card ul {
+            margin: 16px 0 0 20px;
             color: #666;
         }
 
-        .job-meta-item {
-            display: flex;
-            align-items: center;
-            gap: 6px;
+        .feature-card li {
+            font-size: 15px;
+            margin-bottom: 8px;
         }
 
-        .job-btn {
+        .highlight-box {
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+            padding: 32px;
+            border-radius: 16px;
+            margin: 40px 0;
+            border-left: 6px solid #002B5C;
+        }
+
+        .highlight-box h3 {
+            color: #002B5C;
+            font-size: 26px;
+            margin-bottom: 16px;
+        }
+
+        .highlight-box p {
+            color: #1565c0;
+            font-size: 17px;
+            margin: 0;
+        }
+
+        .coming-soon {
+            background: #fff3cd;
+            padding: 20px;
+            border-radius: 12px;
+            border-left: 4px solid #ffc107;
+            margin: 20px 0;
             display: inline-block;
-            padding: 12px 24px;
-            background: #002B5C;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: 600;
-            transition: all 0.3s ease;
         }
 
-        .job-btn:hover {
-            background: #003d7a;
-            transform: translateX(4px);
+        .coming-soon strong {
+            color: #856404;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         /* CTA Section */
@@ -444,7 +427,7 @@
         }
 
         .cta-section h2 {
-            font-size: 40px;
+            font-size: 36px;
             margin-bottom: 20px;
         }
 
@@ -452,13 +435,6 @@
             font-size: 18px;
             margin-bottom: 32px;
             opacity: 0.95;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 16px;
-            justify-content: center;
-            flex-wrap: wrap;
         }
 
         .btn {
@@ -471,29 +447,14 @@
             align-items: center;
             gap: 8px;
             transition: all 0.3s ease;
-            cursor: pointer;
-        }
-
-        .btn-primary {
             background: white;
             color: #002B5C;
         }
 
-        .btn-primary:hover {
+        .btn:hover {
             background: #f5f5f5;
             transform: translateY(-2px);
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: white;
-            border: 2px solid white;
-        }
-
-        .btn-secondary:hover {
-            background: white;
-            color: #002B5C;
         }
 
         /* Footer */
@@ -551,25 +512,12 @@
                 font-size: 36px;
             }
 
-            .section-header h2 {
-                font-size: 32px;
+            .content-section h2 {
+                font-size: 28px;
             }
 
-            .jobs-grid {
+            .features-grid {
                 grid-template-columns: 1fr;
-            }
-
-            .cta-section h2 {
-                font-size: 32px;
-            }
-
-            .filter-options {
-                flex-direction: column;
-            }
-
-            .filter-btn {
-                width: 100%;
-                text-align: center;
             }
         }
     </style>
@@ -595,7 +543,7 @@
     <!-- Main Navigation -->
     <nav class="main-nav">
         <div class="nav-container">
-            <a href="/" class="nav-logo">
+            <a href="index.html" class="nav-logo">
                 <img src="images/logo.jpg" alt="Agence SAGIR">
             </a>
 
@@ -656,52 +604,159 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1>Emplois en petite enfance</h1>
-            <p>Venez enrichir notre équipe avec vos compétences et votre passion.</p>
+            <h1>Nouveautés à venir</h1>
+            <p>Découvrez les innovations qui transformeront votre expérience chez SAGIR</p>
         </div>
     </section>
 
-    <!-- Jobs Section -->
-    <section class="jobs-section">
-        <div class="jobs-container">
-            <div class="section-header">
-                <h2>Remplacements disponibles – Explorez nos mandats temporaires</h2>
-                <p>Découvrez les opportunités de carrière chez SAGIR</p>
+    <!-- Content Section -->
+    <section class="content-section">
+        <div class="content-container">
+            <p>
+                Chez l'Agence SAGIR, nous innovons constamment pour améliorer l'expérience de nos employés
+                et optimiser la gestion de vos mandats. Voici les fonctionnalités et services que nous
+                développons actuellement pour vous offrir toujours plus d'autonomie et de flexibilité.
+            </p>
+
+            <div class="highlight-box">
+                <h3>🚀 Notre vision</h3>
+                <p>
+                    Devenir l'agence de placement la plus technologique et la plus centrée sur l'humain,
+                    en combinant l'intelligence artificielle avec un service personnalisé exceptionnel
+                    pour créer la meilleure expérience employé du secteur.
+                </p>
             </div>
 
-            <!-- Jobs Grid -->
-            <div class="jobs-grid">
-                <!-- Job Card 1 -->
-                <div class="job-card">
-                    <div class="job-badge">Petite enfance</div>
-                    <h3>Éducateurs et éducatrices à l'enfance</h3>
-                    <div class="job-meta">
-                        <div class="job-meta-item">📍 Plusieurs régions</div>
-                        <div class="job-meta-item">⏰ Temps plein / partiel</div>
-                    </div>
-                    <p>
-                        Nous sommes activement à la recherche d'éducateurs et d'éducatrices à l'enfance.
-                        Tu as de l'expérience en CPE ou en garderie? Rejoins notre équipe dynamique pour
-                        des remplacements dans le réseau de la petite enfance.
-                    </p>
-                    <a href="contact.html" class="job-btn">Postuler maintenant →</a>
+            <h2>🌟 Innovations en développement</h2>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <span class="feature-badge">En développement</span>
+                    <span class="feature-icon">📱</span>
+                    <h3>Application mobile SAGIR</h3>
+                    <p>Gérez toute votre carrière depuis votre téléphone:</p>
+                    <ul>
+                        <li>Recevez et acceptez des mandats instantanément</li>
+                        <li>Consultez votre horaire en temps réel</li>
+                        <li>Gérez vos disponibilités facilement</li>
+                        <li>Suivez vos heures et votre paie</li>
+                        <li>Communiquez directement avec votre conseiller</li>
+                        <li>Accédez aux détails de vos mandats</li>
+                    </ul>
+                    <div class="coming-soon"><strong>Lancement prévu: Printemps 2026</strong></div>
                 </div>
 
-                <!-- Job Card 2 -->
-                <div class="job-card">
-                    <div class="job-badge">Petite enfance</div>
-                    <h3>Éducateur ou éducatrice spécialisée</h3>
-                    <div class="job-meta">
-                        <div class="job-meta-item">📍 Plusieurs régions</div>
-                        <div class="job-meta-item">⏰ Temps plein / partiel</div>
-                    </div>
-                    <p>
-                        Tu es passionné(e) par les défis et le potentiel adaptatif humain? Tu es ouvert(e)
-                        d'esprit, créative et dynamique? Tu as une facilité à t'adapter dans différents
-                        milieux? Ce poste est pour toi!
-                    </p>
-                    <a href="contact.html" class="job-btn">Postuler maintenant →</a>
+                <div class="feature-card">
+                    <span class="feature-badge">Bêta 2026</span>
+                    <span class="feature-icon">🤖</span>
+                    <h3>Assistant IA pour l'attribution des mandats</h3>
+                    <p>Intelligence artificielle qui apprend vos préférences:</p>
+                    <ul>
+                        <li>Recommandations personnalisées de mandats</li>
+                        <li>Apprentissage de vos préférences géographiques</li>
+                        <li>Suggestions basées sur votre historique</li>
+                        <li>Optimisation de vos déplacements</li>
+                        <li>Maximisation de vos opportunités</li>
+                    </ul>
+                    <div class="coming-soon"><strong>Phase pilote: Été 2026</strong></div>
                 </div>
+
+                <div class="feature-card">
+                    <span class="feature-badge">Planifié</span>
+                    <span class="feature-icon">🎓</span>
+                    <h3>Plateforme de formation en ligne</h3>
+                    <p>Développez vos compétences à votre rythme:</p>
+                    <ul>
+                        <li>Formations continues certifiées</li>
+                        <li>Modules d'apprentissage interactifs</li>
+                        <li>Webinaires avec des experts</li>
+                        <li>Bibliothèque de ressources professionnelles</li>
+                        <li>Suivi de votre développement professionnel</li>
+                    </ul>
+                    <div class="coming-soon"><strong>Lancement: Automne 2026</strong></div>
+                </div>
+
+                <div class="feature-card">
+                    <span class="feature-badge">En conception</span>
+                    <span class="feature-icon">💰</span>
+                    <h3>Programme de récompenses SAGIR+</h3>
+                    <p>Vos efforts méritent d'être récompensés:</p>
+                    <ul>
+                        <li>Points de fidélité pour chaque mandat</li>
+                        <li>Bonus de performance trimestriels</li>
+                        <li>Avantages exclusifs et rabais partenaires</li>
+                        <li>Primes pour références réussies</li>
+                        <li>Reconnaissance des années de service</li>
+                    </ul>
+                    <div class="coming-soon"><strong>Lancement: Hiver 2027</strong></div>
+                </div>
+
+                <div class="feature-card">
+                    <span class="feature-badge">Préparation</span>
+                    <span class="feature-icon">🗓️</span>
+                    <h3>Système de réservation avancée</h3>
+                    <p>Planifiez vos mandats à l'avance:</p>
+                    <ul>
+                        <li>Réservez des mandats jusqu'à 3 mois d'avance</li>
+                        <li>Bloquez des périodes de disponibilité</li>
+                        <li>Synchronisation avec votre calendrier personnel</li>
+                        <li>Alertes et rappels automatiques</li>
+                        <li>Gestion simplifiée de votre emploi du temps</li>
+                    </ul>
+                    <div class="coming-soon"><strong>Déploiement: Printemps 2026</strong></div>
+                </div>
+
+                <div class="feature-card">
+                    <span class="feature-badge">Innovation</span>
+                    <span class="feature-icon">💬</span>
+                    <h3>Communauté SAGIR en ligne</h3>
+                    <p>Connectez-vous avec vos collègues:</p>
+                    <ul>
+                        <li>Forum d'échange entre employés</li>
+                        <li>Groupes par secteur et région</li>
+                        <li>Partage de conseils et bonnes pratiques</li>
+                        <li>Événements sociaux et rencontres</li>
+                        <li>Mentorat entre pairs</li>
+                    </ul>
+                    <div class="coming-soon"><strong>Lancement: Été 2026</strong></div>
+                </div>
+            </div>
+
+            <h2>🎯 Améliorations continues</h2>
+
+            <p>Au-delà des grandes innovations, nous travaillons constamment sur:</p>
+
+            <div class="feature-card" style="margin: 30px 0;">
+                <h3>Améliorations immédiates (2025-2026)</h3>
+                <ul>
+                    <li><strong>Portail employé amélioré:</strong> Interface plus intuitive et fonctionnalités enrichies</li>
+                    <li><strong>Notifications personnalisables:</strong> Choisissez comment et quand être contacté</li>
+                    <li><strong>Historique de mandats détaillé:</strong> Consultez tous vos mandats passés avec statistiques</li>
+                    <li><strong>Évaluations en temps réel:</strong> Recevez et donnez du feedback immédiatement</li>
+                    <li><strong>Système de paie transparent:</strong> Visualisez vos gains en temps réel</li>
+                    <li><strong>Support multilingue:</strong> Services disponibles en français, anglais et autres langues</li>
+                </ul>
+            </div>
+
+            <h2>📢 Restez informé</h2>
+            <p>
+                Nous partagerons régulièrement des mises à jour sur le développement de ces fonctionnalités.
+                Les employés actuels de SAGIR seront les premiers informés et pourront participer aux phases
+                de test pilote.
+            </p>
+
+            <p>
+                Vous avez des suggestions ou des idées pour améliorer nos services? Nous sommes toujours
+                à l'écoute! Contactez-nous pour partager vos recommandations.
+            </p>
+
+            <div class="highlight-box">
+                <h3>💡 Programme bêta-testeurs</h3>
+                <p>
+                    Vous voulez être parmi les premiers à essayer nos nouvelles fonctionnalités? Inscrivez-vous
+                    à notre programme de bêta-testeurs et contribuez à façonner l'avenir de SAGIR. Les
+                    participants bénéficieront d'un accès anticipé et de récompenses exclusives.
+                </p>
             </div>
         </div>
     </section>
@@ -709,15 +764,9 @@
     <!-- CTA Section -->
     <section class="cta-section">
         <div class="cta-content">
-            <h2>Vous ne trouvez pas le mandat idéal ?</h2>
-            <p>
-                Envoyez-nous votre candidature spontanée! Nous sommes toujours à la recherche de 
-                nouveaux talents pour rejoindre notre équipe.
-            </p>
-            <div class="cta-buttons">
-                <a href="contact.html" class="btn btn-primary">Envoyer ma candidature</a>
-                <a href="tel:450.313.0465" class="btn btn-secondary">📞 Nous appeler</a>
-            </div>
+            <h2>Faites partie de l'avenir</h2>
+            <p>Rejoignez SAGIR dès maintenant et profitez de toutes ces innovations dès leur lancement</p>
+            <a href="contact.html" class="btn">Postuler maintenant</a>
         </div>
     </section>
 
