@@ -614,10 +614,60 @@
             font-weight: 500;
         }
 
+        /* Gallery Section */
+        .gallery-section {
+            padding: 80px 40px;
+            background: white;
+        }
+
+        .gallery-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 40px;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            aspect-ratio: 4/3;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 32px rgba(0, 131, 143, 0.2);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @media (max-width: 968px) {
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
         /* Why Choose Us */
         .why-section {
             padding: 80px 40px;
-            background: white;
+            background: #f8f9fa;
         }
 
         .why-content {
@@ -1108,6 +1158,27 @@
                 <div class="stat-card">
                     <div class="stat-number">24h</div>
                     <div class="stat-label">Temps de réponse moyen</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+        <div class="gallery-content">
+            <div class="section-header">
+                <h2>Nos services en images</h2>
+                <p>Découvrez l'environnement professionnel et chaleureux de nos partenaires</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="images/residence-aines-003.webp" alt="Soins aux résidents">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/residence-aines-004.webp" alt="Personnel qualifié">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/residence-aines-005.webp" alt="Environnement chaleureux">
                 </div>
             </div>
         </div>

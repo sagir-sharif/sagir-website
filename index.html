@@ -506,10 +506,75 @@
             font-weight: 500;
         }
 
+        /* Showcase Section */
+        .showcase-section {
+            padding: 80px 40px;
+            background: white;
+        }
+
+        .showcase-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .showcase-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px;
+            margin-top: 40px;
+        }
+
+        .showcase-item {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            aspect-ratio: 16/9;
+        }
+
+        .showcase-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.15);
+        }
+
+        .showcase-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .showcase-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 24px;
+            background: linear-gradient(to top, rgba(0, 43, 92, 0.95) 0%, rgba(0, 43, 92, 0) 100%);
+            color: white;
+        }
+
+        .showcase-overlay h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .showcase-overlay p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        @media (max-width: 768px) {
+            .showcase-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
         /* Trust Badges */
         .trust-section {
             padding: 60px 40px;
-            background: white;
+            background: #f8f9fa;
             border-top: 1px solid #e0e0e0;
         }
 
@@ -1096,6 +1161,46 @@
                 <div class="stat-item">
                     <div class="stat-number">24h</div>
                     <div class="stat-label">Temps de réponse</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Showcase Section -->
+    <section class="showcase-section">
+        <div class="showcase-content">
+            <div class="section-header">
+                <h2>Nos services en action</h2>
+                <p>Des professionnels dévoués dans des environnements de qualité</p>
+            </div>
+            <div class="showcase-grid">
+                <div class="showcase-item">
+                    <img src="images/cpe-003.webp" alt="Services de petite enfance">
+                    <div class="showcase-overlay">
+                        <h3>Petite enfance</h3>
+                        <p>Des éducatrices passionnées et qualifiées</p>
+                    </div>
+                </div>
+                <div class="showcase-item">
+                    <img src="images/residence-aines-006.webp" alt="Services pour résidences">
+                    <div class="showcase-overlay">
+                        <h3>Résidences pour aînés</h3>
+                        <p>Personnel attentionné et professionnel</p>
+                    </div>
+                </div>
+                <div class="showcase-item">
+                    <img src="images/cpe-006.webp" alt="Environnement éducatif">
+                    <div class="showcase-overlay">
+                        <h3>Environnements stimulants</h3>
+                        <p>Espaces adaptés et sécuritaires</p>
+                    </div>
+                </div>
+                <div class="showcase-item">
+                    <img src="images/residence-aines-007.webp" alt="Soins aux aînés">
+                    <div class="showcase-overlay">
+                        <h3>Soins de qualité</h3>
+                        <p>Équipes dévouées au bien-être</p>
+                    </div>
                 </div>
             </div>
         </div>
