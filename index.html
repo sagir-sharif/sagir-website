@@ -783,6 +783,12 @@
             margin-top: 60px;
         }
 
+        @media (min-width: 1200px) {
+            .steps-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
         .step {
             text-align: center;
         }
@@ -1159,12 +1165,8 @@
     <!-- Hero Section -->
     <section class="hero-section">
         <div class="hero-left">
-            <h1 class="hero-title">Agence de placement SAGIR</h1>
-            <p class="hero-subtitle">Spécialistes du placement de personnel qualifié</p>
-            <p class="hero-description">
-                Que vous soyez un CPE, une garderie, une résidence pour aînés ou un(e) intervenant(e),
-                notre équipe est là pour vous!
-            </p>
+            <h1 class="hero-title">SAGIR – Votre solution rapide pour du personnel qualifié</h1>
+            <p class="hero-subtitle">Que vous dirigiez un CPE, une garderie ou une résidence, nous avons les bons professionnels pour vous.</p>
         </div>
 
         <div class="hero-right">
@@ -1172,7 +1174,6 @@
                 <!-- Card 1: Petite Enfance -->
                 <div class="service-card card-petite-enfance">
                     <div class="card-image">
-                        <div class="card-icon">👶</div>
                     </div>
                     <div class="card-content">
                         <h3 class="card-title">Services de la petite enfance</h3>
@@ -1189,13 +1190,12 @@
                 <!-- Card 2: Résidences pour Aînés -->
                 <div class="service-card card-residences">
                     <div class="card-image">
-                        <div class="card-icon">💚</div>
                     </div>
                     <div class="card-content">
                         <h3 class="card-title">Résidences pour aînés</h3>
                         <p class="card-subtitle">
-                            Préposés aux bénéficiaires • Infirmières auxiliaires •
-                            Personnel de soutien • Accompagnateurs
+                            Éducatrices spécialisées • Préposés à l'alimentation et à l'entretien •
+                            Intervenants sociaux communautaires
                         </p>
                         <a href="residence-aines.html" class="card-button">
                             Découvrir →
@@ -1209,7 +1209,7 @@
     <!-- About Section -->
     <section class="about-section">
         <div class="about-content">
-            <h2>Votre partenaire de confiance depuis plus de 15 ans</h2>
+            <h2>Votre partenaire de confiance</h2>
             <p>
                 L'Agence SAGIR se spécialise dans le placement de personnel qualifié pour les services de
                 la petite enfance et les résidences pour aînés à travers le Québec. Notre expertise reconnue
@@ -1219,20 +1219,20 @@
 
             <div class="about-stats">
                 <div class="stat-item">
-                    <div class="stat-number">15+</div>
+                    <div class="stat-number">3</div>
                     <div class="stat-label">Années d'expérience</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number">1000+</div>
-                    <div class="stat-label">Professionnels placés</div>
+                    <div class="stat-number">1289</div>
+                    <div class="stat-label">Demandes de remplacement comblées</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number">95%</div>
-                    <div class="stat-label">Taux de satisfaction</div>
+                    <div class="stat-number">78%</div>
+                    <div class="stat-label">Taux de comblement</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number">24h</div>
-                    <div class="stat-label">Temps de réponse</div>
+                    <div class="stat-number">75+</div>
+                    <div class="stat-label">Partenariats avec des organisations</div>
                 </div>
             </div>
         </div>
@@ -1278,37 +1278,6 @@
         </div>
     </section>
 
-    <!-- Trust Badges -->
-    <section class="trust-section">
-        <div class="trust-content">
-            <div class="trust-grid">
-                <div class="trust-item">
-                    <div class="trust-icon">⚡</div>
-                    <h3>Réponse en moins de 2h</h3>
-                    <p>Nous traitons votre demande rapidement</p>
-                </div>
-
-                <div class="trust-item">
-                    <div class="trust-icon">✓</div>
-                    <h3>Personnel qualifié vérifié</h3>
-                    <p>Antécédents et qualifications validés</p>
-                </div>
-
-                <div class="trust-item">
-                    <div class="trust-icon">🤝</div>
-                    <h3>Sans engagement</h3>
-                    <p>Aucun contrat à long terme requis</p>
-                </div>
-
-                <div class="trust-item">
-                    <div class="trust-icon">🔄</div>
-                    <h3>Garantie satisfaction</h3>
-                    <p>Remplacement immédiat si non satisfait</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Services Overview -->
     <section class="services-overview">
         <div class="services-content">
@@ -1321,7 +1290,6 @@
                 <!-- Petite Enfance -->
                 <div class="service-block">
                     <div class="service-block-header">
-                        <div class="service-block-icon">👶</div>
                         <h3>Petite enfance</h3>
                     </div>
                     <ul class="service-list">
@@ -1331,7 +1299,7 @@
                         <li>Préposés à l'entretien ménager</li>
                         <li>Personnel de soutien</li>
                     </ul>
-                    <a href="#" class="service-link">
+                    <a href="cpe-landing.html" class="service-link">
                         En savoir plus →
                     </a>
                 </div>
@@ -1339,17 +1307,16 @@
                 <!-- Résidences pour Aînés -->
                 <div class="service-block">
                     <div class="service-block-header">
-                        <div class="service-block-icon">💚</div>
                         <h3>Résidences pour aînés</h3>
                     </div>
                     <ul class="service-list">
                         <li>Préposés aux bénéficiaires</li>
                         <li>Infirmières et infirmières auxiliaires</li>
-                        <li>Personnel de cuisine et nutrition</li>
+                        <li>Préposés à l'alimentation</li>
                         <li>Préposés à l'entretien</li>
-                        <li>Animateurs et accompagnateurs</li>
+                        <li>Éducatrices spécialisées et intervenants sociaux communautaires</li>
                     </ul>
-                    <a href="#" class="service-link">
+                    <a href="residence-aines.html" class="service-link">
                         En savoir plus →
                     </a>
                 </div>
@@ -1414,7 +1381,7 @@
 
             <div class="why-grid">
                 <div class="why-item">
-                    <div class="why-icon">⚡</div>
+                    <div class="why-icon">✨</div>
                     <div class="why-text">
                         <h3>Flexibilité contractuelle</h3>
                         <p>Profitez d'une flexibilité totale : aucun frais d'adhésion et aucun minimum d'heures de remplacement requis.</p>
@@ -1422,7 +1389,7 @@
                 </div>
 
                 <div class="why-item">
-                    <div class="why-icon">💰</div>
+                    <div class="why-icon">💳</div>
                     <div class="why-text">
                         <h3>Facturation simplifiée</h3>
                         <p>Un processus simple et efficace : validation des heures effectuées et adaptation selon votre structure organisationnelle.</p>
@@ -1430,7 +1397,7 @@
                 </div>
 
                 <div class="why-item">
-                    <div class="why-icon">📋</div>
+                    <div class="why-icon">📁</div>
                     <div class="why-text">
                         <h3>Dossier de l'employé complet</h3>
                         <p>Un dossier à jour et complet : empêchements judiciaires, assermentation des documents, RCR, CV, attestations d'heures qualifiantes, diplômes et formations pertinentes.</p>
@@ -1438,7 +1405,7 @@
                 </div>
 
                 <div class="why-item">
-                    <div class="why-icon">🎯</div>
+                    <div class="why-icon">🎓</div>
                     <div class="why-text">
                         <h3>Sélection des employés</h3>
                         <p>Un recrutement rigoureux, assisté par l'intelligence artificielle, pour garantir du personnel fiable, flexible, ouvert d'esprit et engagé dans le développement et la sécurité des enfants.</p>
@@ -1446,7 +1413,7 @@
                 </div>
 
                 <div class="why-item">
-                    <div class="why-icon">📞</div>
+                    <div class="why-icon">⚡</div>
                     <div class="why-text">
                         <h3>Disponibilité rapide</h3>
                         <p>Recevez une confirmation pour les remplacements d'urgence en moins de 30 minutes et consultez le statut de vos demandes en temps réel directement sur votre portail.</p>
@@ -1454,7 +1421,7 @@
                 </div>
 
                 <div class="why-item">
-                    <div class="why-icon">🤝</div>
+                    <div class="why-icon">👥</div>
                     <div class="why-text">
                         <h3>Suivi personnalisé</h3>
                         <p>Une conseillère dédiée accompagne vos besoins et veille à la qualité de chaque placement.</p>
@@ -1471,7 +1438,9 @@
             <p>Contactez-nous dès aujourd'hui et bénéficiez d'une équipe fiable, flexible et qualifiée.</p>
             <div class="cta-buttons">
                 <a href="https://outlook.office.com/bookwithme/user/4e84c1499ff949ada5865d74ce44048b%40agencesagir.com" target="_blank" rel="noopener" class="btn btn-primary">Rencontrer une représentante</a>
-                <a href="tel:450.313.0465" class="btn btn-secondary">📞 450.313.0465</a>
+                <a href="tel:450.313.0465" class="btn btn-secondary">450.313.0465</a>
+                <a href="tel:819.489.1115" class="btn btn-secondary">819.489.1115</a>
+                <a href="contact.html" class="btn btn-secondary">Nous contacter</a>
             </div>
         </div>
     </section>
