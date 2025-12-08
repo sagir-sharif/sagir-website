@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emplois Petite Enfance - Agence SAGIR</title>
+    <title>Régions desservies - Agence SAGIR</title>
     <style>
         * {
             margin: 0;
@@ -280,194 +280,131 @@
             .mobile-menu-toggle {
                 display: block;
             }
+
+            .top-bar-content {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
         }
 
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, #002B5C 0%, #004080 100%);
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(135deg, #002B5C 0%, #003d7a 100%);
+            color: white;
             padding: 80px 40px 60px;
-            color: white;
             text-align: center;
         }
 
-        .hero-content {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .hero h1 {
+        .page-header h1 {
             font-size: 48px;
-            font-weight: 700;
-            margin-bottom: 20px;
-            line-height: 1.2;
+            margin-bottom: 16px;
         }
 
-        .hero p {
+        .page-header p {
             font-size: 20px;
-            opacity: 0.95;
-            margin-bottom: 0;
-        }
-
-        /* Jobs Section */
-        .jobs-section {
-            padding: 80px 40px;
-            background: #f8f9fa;
-        }
-
-        .jobs-container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .section-header h2 {
-            font-size: 40px;
-            color: #002B5C;
-            margin-bottom: 16px;
-        }
-
-        .section-header p {
-            font-size: 18px;
-            color: #555;
-        }
-
-        /* Filter Section */
-        .filter-section {
-            background: white;
-            padding: 24px;
-            border-radius: 12px;
-            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-            margin-bottom: 40px;
-        }
-
-        .filter-header {
-            font-size: 18px;
-            font-weight: 600;
-            color: #002B5C;
-            margin-bottom: 16px;
-        }
-
-        .filter-options {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
-
-        .filter-btn {
-            padding: 10px 20px;
-            background: #f8f9fa;
-            border: 2px solid #e0e0e0;
-            border-radius: 8px;
-            color: #555;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-size: 15px;
-            font-weight: 500;
-        }
-
-        .filter-btn:hover,
-        .filter-btn.active {
-            background: #002B5C;
-            color: white;
-            border-color: #002B5C;
-        }
-
-        /* Jobs Grid */
-        .jobs-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 30px;
-        }
-
-        .job-card {
-            background: white;
-            border-radius: 12px;
-            padding: 32px;
-            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-            transition: all 0.3s ease;
-            border-top: 4px solid #002B5C;
-        }
-
-        .job-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-        }
-
-        .job-badge {
-            display: inline-block;
-            padding: 6px 12px;
-            background: #e3f2fd;
-            color: #002B5C;
-            border-radius: 6px;
-            font-size: 13px;
-            font-weight: 600;
-            margin-bottom: 16px;
-        }
-
-        .job-card h3 {
-            font-size: 24px;
-            color: #002B5C;
-            margin-bottom: 12px;
-            line-height: 1.3;
-        }
-
-        .job-card p {
-            color: #555;
-            font-size: 16px;
-            line-height: 1.7;
-            margin-bottom: 20px;
-        }
-
-        .job-meta {
-            display: flex;
-            gap: 16px;
-            margin-bottom: 20px;
-            font-size: 14px;
-            color: #666;
-        }
-
-        .job-meta-item {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .job-btn {
-            display: inline-block;
-            padding: 12px 24px;
-            background: #002B5C;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-
-        .job-btn:hover {
-            background: #003d7a;
-            transform: translateX(4px);
-        }
-
-        /* CTA Section */
-        .cta-section {
-            padding: 80px 40px;
-            background: linear-gradient(135deg, #002B5C 0%, #004080 100%);
-            color: white;
-            text-align: center;
-        }
-
-        .cta-content {
+            opacity: 0.9;
             max-width: 800px;
             margin: 0 auto;
         }
 
-        .cta-section h2 {
-            font-size: 40px;
+        /* Main Content */
+        .main-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 40px;
+        }
+
+        .intro-section {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .intro-section h2 {
+            font-size: 36px;
+            color: #002B5C;
+            margin-bottom: 24px;
+        }
+
+        .intro-section p {
+            font-size: 18px;
+            color: #555;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        /* Regions Grid */
+        .regions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+            margin-top: 60px;
+        }
+
+        .region-card {
+            background: #f8f9fa;
+            border-radius: 16px;
+            padding: 40px;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .region-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+            border-color: #7CB342;
+        }
+
+        .region-card h3 {
+            font-size: 24px;
+            color: #002B5C;
             margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .region-icon {
+            font-size: 32px;
+        }
+
+        .region-card ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .region-card li {
+            padding: 12px 0;
+            color: #555;
+            font-size: 16px;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .region-card li:last-child {
+            border-bottom: none;
+        }
+
+        .region-card li::before {
+            content: '📍';
+            font-size: 18px;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #7CB342 0%, #689F38 100%);
+            padding: 80px 40px;
+            text-align: center;
+            color: white;
+            margin-top: 80px;
+        }
+
+        .cta-section h2 {
+            font-size: 36px;
+            margin-bottom: 24px;
         }
 
         .cta-section p {
@@ -494,11 +431,12 @@
             gap: 8px;
             transition: all 0.3s ease;
             cursor: pointer;
+            border: none;
         }
 
         .btn-primary {
             background: white;
-            color: #002B5C;
+            color: #7CB342;
         }
 
         .btn-primary:hover {
@@ -515,7 +453,7 @@
 
         .btn-secondary:hover {
             background: white;
-            color: #002B5C;
+            color: #7CB342;
         }
 
         /* Footer */
@@ -592,30 +530,22 @@
             transform: translateY(-3px);
         }
 
+        /* Responsive */
         @media (max-width: 768px) {
-            .hero h1 {
+            .page-header h1 {
                 font-size: 36px;
             }
 
-            .section-header h2 {
-                font-size: 32px;
+            .page-header p {
+                font-size: 16px;
             }
 
-            .jobs-grid {
+            .intro-section h2 {
+                font-size: 28px;
+            }
+
+            .regions-grid {
                 grid-template-columns: 1fr;
-            }
-
-            .cta-section h2 {
-                font-size: 32px;
-            }
-
-            .filter-options {
-                flex-direction: column;
-            }
-
-            .filter-btn {
-                width: 100%;
-                text-align: center;
             }
         }
     </style>
@@ -652,7 +582,7 @@
     <!-- Main Navigation -->
     <nav class="main-nav">
         <div class="nav-container">
-            <a href="/" class="nav-logo">
+            <a href="index.html" class="nav-logo">
                 <img src="images/logo.jpg" alt="Agence SAGIR">
             </a>
 
@@ -717,71 +647,98 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Emplois en petite enfance</h1>
-            <p>Venez enrichir notre équipe avec vos compétences et votre passion.</p>
-        </div>
+    <!-- Page Header -->
+    <section class="page-header">
+        <h1>Régions desservies</h1>
+        <p>Nos services de placement de personnel sont disponibles dans plusieurs régions du Québec</p>
     </section>
 
-    <!-- Jobs Section -->
-    <section class="jobs-section">
-        <div class="jobs-container">
-            <div class="section-header">
-                <h2>Remplacements disponibles – Explorez nos mandats temporaires</h2>
-                <p>Découvrez les opportunités de carrière chez SAGIR</p>
+    <!-- Main Content -->
+    <section class="main-content">
+        <div class="intro-section">
+            <h2>Notre couverture au Québec</h2>
+            <p>
+                L'Agence SAGIR dessert plusieurs régions du Québec pour répondre rapidement à vos besoins
+                en personnel qualifié. Notre réseau étendu nous permet d'offrir des services de qualité
+                dans les secteurs de la petite enfance et des résidences pour aînés.
+            </p>
+        </div>
+
+        <div class="regions-grid">
+            <div class="region-card">
+                <h3><span class="region-icon">🌆</span> Montréal</h3>
+                <ul>
+                    <li>Montréal (Île)</li>
+                    <li>Laval</li>
+                    <li>Longueuil</li>
+                    <li>Nord de Montréal</li>
+                    <li>Sud de Montréal</li>
+                </ul>
             </div>
 
-            <!-- Jobs Grid -->
-            <div class="jobs-grid">
-                <!-- Job Card 1 -->
-                <div class="job-card">
-                    <div class="job-badge">Petite enfance</div>
-                    <h3>Éducateurs et éducatrices à l'enfance</h3>
-                    <div class="job-meta">
-                        <div class="job-meta-item">📍 Plusieurs régions</div>
-                        <div class="job-meta-item">⏰ Temps plein / partiel</div>
-                    </div>
-                    <p>
-                        Nous sommes activement à la recherche d'éducateurs et d'éducatrices à l'enfance.
-                        Tu as de l'expérience en CPE ou en garderie? Rejoins notre équipe dynamique pour
-                        des remplacements dans le réseau de la petite enfance.
-                    </p>
-                    <a href="contact.html" class="job-btn">Postuler maintenant →</a>
-                </div>
+            <div class="region-card">
+                <h3><span class="region-icon">🏞️</span> Laurentides</h3>
+                <ul>
+                    <li>Saint-Jérôme</li>
+                    <li>Mont-Tremblant</li>
+                    <li>Sainte-Agathe-des-Monts</li>
+                    <li>Saint-Sauveur</li>
+                    <li>Mirabel</li>
+                </ul>
+            </div>
 
-                <!-- Job Card 2 -->
-                <div class="job-card">
-                    <div class="job-badge">Petite enfance</div>
-                    <h3>Éducateur ou éducatrice spécialisée</h3>
-                    <div class="job-meta">
-                        <div class="job-meta-item">📍 Plusieurs régions</div>
-                        <div class="job-meta-item">⏰ Temps plein / partiel</div>
-                    </div>
-                    <p>
-                        Tu es passionné(e) par les défis et le potentiel adaptatif humain? Tu es ouvert(e)
-                        d'esprit, créative et dynamique? Tu as une facilité à t'adapter dans différents
-                        milieux? Ce poste est pour toi!
-                    </p>
-                    <a href="contact.html" class="job-btn">Postuler maintenant →</a>
-                </div>
+            <div class="region-card">
+                <h3><span class="region-icon">🌲</span> Lanaudière</h3>
+                <ul>
+                    <li>Joliette</li>
+                    <li>Terrebonne</li>
+                    <li>Repentigny</li>
+                    <li>Mascouche</li>
+                    <li>L'Assomption</li>
+                </ul>
+            </div>
+
+            <div class="region-card">
+                <h3><span class="region-icon">🏔️</span> Outaouais</h3>
+                <ul>
+                    <li>Gatineau</li>
+                    <li>Aylmer</li>
+                    <li>Hull</li>
+                    <li>Buckingham</li>
+                    <li>Masson-Angers</li>
+                </ul>
+            </div>
+
+            <div class="region-card">
+                <h3><span class="region-icon">🌾</span> Montérégie</h3>
+                <ul>
+                    <li>Brossard</li>
+                    <li>Saint-Jean-sur-Richelieu</li>
+                    <li>Granby</li>
+                    <li>Saint-Hyacinthe</li>
+                    <li>Vaudreuil-Dorion</li>
+                </ul>
+            </div>
+
+            <div class="region-card">
+                <h3><span class="region-icon">🏙️</span> Autres régions</h3>
+                <ul>
+                    <li>Trois-Rivières</li>
+                    <li>Drummondville</li>
+                    <li>Shawinigan</li>
+                    <li>Et plus encore...</li>
+                </ul>
             </div>
         </div>
     </section>
 
     <!-- CTA Section -->
     <section class="cta-section">
-        <div class="cta-content">
-            <h2>Vous ne trouvez pas le mandat idéal ?</h2>
-            <p>
-                Envoyez-nous votre candidature spontanée! Nous sommes toujours à la recherche de 
-                nouveaux talents pour rejoindre notre équipe.
-            </p>
-            <div class="cta-buttons">
-                <a href="contact.html" class="btn btn-primary">Envoyer ma candidature</a>
-                <a href="tel:450.313.0465" class="btn btn-secondary">📞 Nous appeler</a>
-            </div>
+        <h2>Votre région n'est pas listée?</h2>
+        <p>Contactez-nous pour vérifier la disponibilité de nos services dans votre secteur</p>
+        <div class="cta-buttons">
+            <a href="contact.html" class="btn btn-primary">Nous contacter</a>
+            <a href="tel:450.313.0465" class="btn btn-secondary">📞 450.313.0465</a>
         </div>
     </section>
 
