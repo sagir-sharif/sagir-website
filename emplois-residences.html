@@ -160,6 +160,86 @@
             transform: translateX(4px);
         }
 
+        /* FAQ Section */
+        .faq-section {
+            padding: 80px 40px;
+            background: white;
+        }
+
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            margin-bottom: 16px;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            border-color: #002B5C;
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 20px 24px;
+            background: white;
+            border: none;
+            text-align: left;
+            font-size: 16px;
+            font-weight: 600;
+            color: #002B5C;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background: #f8f9fa;
+        }
+
+        .faq-icon {
+            font-size: 20px;
+            transition: transform 0.3s ease;
+            color: #002B5C;
+            flex-shrink: 0;
+            margin-left: 16px;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-answer-content {
+            padding: 0 24px 20px 24px;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .faq-answer-content ul {
+            margin: 12px 0 12px 20px;
+            list-style: disc;
+        }
+
+        .faq-answer-content li {
+            margin-bottom: 8px;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 1000px;
+        }
+
         /* CTA Section */
         .cta-section {
             padding: 80px 40px;
@@ -555,6 +635,260 @@
         </div>
     </section>
 
+    <!-- FAQ Section -->
+    <section id="faq" class="faq-section">
+        <div class="faq-container">
+            <div class="section-header">
+                <h2>FAQ – Résidences pour aînés</h2>
+                <p>Trouvez les réponses à vos questions sur le travail en résidences pour aînés</p>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Êtes-vous en mesure d'émettre un contrat de travail et de demander l'EIMT et le CAQ?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Non. Comme agence de remplacement, nous n'offrons pas de postes permanents garantis, ce qui est requis pour une démarche d'EIMT ou de CAQ.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Recrutez-vous à l'international?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Non. Nos besoins étant urgents et variables, nous concentrons notre recrutement local.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Quels types de postes offrez-vous?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Nous offrons des postes de remplacement dans différents milieux en résidences pour aînés : soins, alimentation et entretien. Les horaires et la durée des mandats varient selon les besoins.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Offrez-vous des postes à temps plein?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Nos postes sont principalement temporaires ou occasionnels. Certains mandats peuvent être à temps plein temporairement, mais il ne s'agit pas de postes permanents.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Comment fonctionne le travail de remplacement?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Vous recevez des offres selon vos disponibilités, votre lieu de résidence et votre expérience. Vous êtes libre d'accepter ou de refuser les remplacements proposés.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Avez-vous des exigences de formation?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Les exigences varient selon les postes :</p>
+                        <ul>
+                            <li><strong>Préposé(e) aux bénéficiaires :</strong> PDSB, RCR, Loi 90, AP-RPA ou DEP équivalent</li>
+                            <li><strong>Responsable alimentaire :</strong> DEP cuisine d'établissement, certification MAPAQ</li>
+                            <li><strong>Préposé(e) à l'alimentation :</strong> certification MAPAQ hygiène et salubrité</li>
+                            <li><strong>Infirmier(ère) auxiliaire :</strong> DEP SASI, membre OIIAQ, RCR et PDSB à jour</li>
+                        </ul>
+                        <p>Certaines fonctions peuvent être accessibles sans diplôme spécialisé selon l'expérience.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Avez-vous besoin d'expérience pour postuler?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>L'expérience est un atout, mais plusieurs milieux acceptent des candidats débutants ou ayant suivi des stages dans le domaine.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Dois-je être disponible à temps plein pour travailler avec vous?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Non. Vous choisissez vos disponibilités. Nous tentons d'adapter les remplacements à votre horaire.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Comment puis-je postuler?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Remplissez notre formulaire en ligne ou envoyez votre CV. Un membre de notre équipe vous contactera.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Puis-je postuler si je n'ai pas la formation mais que j'ai de l'expérience?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Oui, certaines fonctions permettent de postuler selon votre expérience. Une reconnaissance des acquis peut être possible.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(this)">
+                    <span>J'ai envoyé mon CV mais je n'ai pas eu de réponse. Que faire?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Assurez-vous que votre CV met en évidence votre expérience, vos formations et vos coordonnées correctes.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Puis-je travailler à temps partiel?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Oui, selon vos disponibilités. Certains mandats nécessitent la présence sur des journées complètes, mais vous pouvez choisir vos remplacements.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Quels sont les horaires types?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <ul>
+                            <li><strong>Quart de jour :</strong> 7 h à 15 h ou 7 h à 15 h 30</li>
+                            <li><strong>Quart de soirée :</strong> 15 h à 23 h ou 15 h 30 à 23 h 30</li>
+                            <li><strong>Quart de nuit :</strong> 23 h à 7 h ou 23 h 30 à 7 h 30</li>
+                            <li><strong>Durée des quarts :</strong> 6 à 9,25 h par journée</li>
+                            <li><strong>Temps plein :</strong> 32 à 38 h/semaine</li>
+                            <li><strong>Temps partiel :</strong> minimum 1 journée/semaine</li>
+                        </ul>
+                        <p>Certaines journées peuvent être plus longues et des heures supplémentaires sont possibles.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Puis-je travailler pendant le temps des fêtes?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Oui, les besoins sont 7 jours sur 7 et 24h/24.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Lors des remplacements, serai-je dans un établissement différent chaque jour?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Nous essayons de maintenir la stabilité pour les résidents et l'équipe. Il peut arriver de travailler dans plusieurs établissements, mais c'est exceptionnel. Certaines personnes préfèrent expérimenter des milieux différents et nous respectons également ce choix.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Est-ce que je vais recevoir mes horaires le matin même?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Cela est possible. Les horaires sont majoritairement communiqués à l'avance, même si certains ajustements de dernière minute peuvent survenir.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Est-il possible de manquer d'heures de remplacement même en travaillant à temps plein?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Il n'y a aucune garantie d'heures de remplacements et les besoins dans ce secteur sont cependant majeurs. Nous proposons des formations pertinentes pendant les baisses d'heures s'il y lieu.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Comment fonctionne le calcul des journées fériées?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Le calcul se fait selon la moyenne des heures travaillées dans les 4 semaines précédentes au jour férié.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Comment fonctionne la paie?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>La paie est versée toutes les deux semaines, le vendredi, même si le relevé de paie est reçu le jeudi.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
     <!-- CTA Section -->
     <section class="cta-section">
         <div class="cta-content">
@@ -588,6 +922,23 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        function toggleFAQ(button) {
+            const faqItem = button.parentElement;
+            const isActive = faqItem.classList.contains('active');
+
+            // Close all other FAQ items
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+            });
+
+            // Toggle current item
+            if (!isActive) {
+                faqItem.classList.add('active');
+            }
+        }
+    </script>
 
 </body>
 </html>
