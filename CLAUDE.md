@@ -8,7 +8,15 @@ This is a static website for Agence SAGIR, a personnel placement agency speciali
 
 ## Architecture
 
-**Single-page HTML with embedded CSS**: The main landing page ([index.html](index.html)) contains all styles in a `<style>` tag within the `<head>`. There are no external CSS files or JavaScript frameworks.
+**HTML with centralized CSS**: The website uses a hybrid CSS approach:
+- **Common styles** are in `styles/common.css` - includes navigation, footer, buttons, top bar, and section headers
+- **Page-specific styles** remain in each HTML file's `<style>` tag - includes hero sections, galleries, forms, cards, and unique layouts
+- No JavaScript frameworks are used
+
+**IMPORTANT**: When creating new pages or modifying existing ones:
+1. Always link to `styles/common.css` in the `<head>` section: `<link rel="stylesheet" href="styles/common.css">`
+2. Only add page-specific CSS to the `<style>` tag
+3. Never duplicate CSS that already exists in common.css
 
 **Navigation structure**:
 - Main navigation bar with logo (images/logo.jpg) in top-left
@@ -47,7 +55,10 @@ This is a static website for Agence SAGIR, a personnel placement agency speciali
 
 ## Key Implementation Details
 
-**CSS organization**: Styles are organized by section with clear comments (e.g., `/* Navigation Menu */`, `/* Hero Section */`). Mobile responsive breakpoints at 968px and 768px.
+**CSS organization**:
+- **Common CSS** (`styles/common.css`): Contains universal reset, body styles, navigation, footer, buttons, top bar, section headers, and common responsive breakpoints (@media at 968px and 768px)
+- **Page-specific CSS**: Each HTML file's `<style>` tag contains only unique styles for that page (hero sections, galleries, forms, cards, etc.)
+- All styles are organized by section with clear comments (e.g., `/* Navigation Menu */`, `/* Hero Section */`)
 
 **Logo usage**: The navigation uses `<img src="images/logo.jpg">` with CSS styling `.nav-logo img { height: 50px; width: auto; }`. Do not use text-based logos in the navigation.
 
@@ -72,16 +83,39 @@ git push origin main
 
 ## File Structure
 
+### HTML Pages (13 total)
 - `index.html` - Main landing page with service cards linking to landing pages
-- `cpe-landing.html` - CPE (early childhood services) landing page with navigation
-- `residence-aines.html` - Senior residences landing page (no navigation menu)
-- `contact.html` - Contact page with form, contact info, and map placeholder
+- `cpe-landing.html` - CPE (early childhood services) landing page
+- `residence-aines.html` - Senior residences landing page
+- `contact.html` - Contact page with form, contact info, and map
+- `regions-desservies.html` - Regions served across Quebec
+- `qui-sommes-nous.html` - About us page
+- `emplois-cpe.html` - CPE employment opportunities
+- `emplois-residences.html` - Residence employment opportunities
+- `faq.html` - Frequently asked questions
+- `conditions-travail.html` - Working conditions
+- `conditions-affectation.html` - Assignment conditions
+- `processus-embauche.html` - Hiring process
+- `nouveautes.html` - News and updates
+
+### CSS
+- `styles/common.css` - **Centralized common styles** (navigation, footer, buttons, top bar, section headers, responsive breakpoints)
+
+### Assets
 - `images/logo.jpg` - Company logo
-- `images/residences.jpg` - Background image for residence service card
+- `images/` - Various images for service cards, galleries, and page backgrounds
+
+### Configuration
 - `CNAME` - GitHub Pages custom domain configuration (new.agencesagir.com)
 - `.gitignore` - Excludes .claude/ directory from version control
+- `CLAUDE.md` - Development guidelines and project documentation
 
 ## Important Standards
+
+**Common CSS inclusion**: ALL pages must link to the common stylesheet in the `<head>` section:
+```html
+<link rel="stylesheet" href="styles/common.css">
+```
 
 **Permit number footer**: ALL pages must include the footer with permit number AP-2103464. When creating new pages, always add:
 ```html
@@ -93,25 +127,4 @@ git push origin main
 </footer>
 ```
 
-And the corresponding CSS:
-```css
-/* Footer */
-.footer {
-    background: #f8f9fa;
-    padding: 24px 40px;
-    text-align: center;
-    border-top: 1px solid #e0e0e0;
-}
-
-.footer-content {
-    max-width: 1400px;
-    margin: 0 auto;
-    color: #666;
-    font-size: 14px;
-}
-
-.footer-permit {
-    font-weight: 500;
-    color: #002B5C;
-}
-```
+Note: Footer CSS is in `styles/common.css` - no need to add CSS for standard footer elements.
