@@ -282,6 +282,50 @@
             max-height: 1000px;
         }
 
+        /* Conditions de travail Section */
+        .content-section {
+            padding: 80px 40px;
+            background: white;
+        }
+
+        .content-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .benefit-card {
+            background: #f8f9fa;
+            padding: 32px;
+            border-radius: 12px;
+            border-left: 4px solid #002B5C;
+        }
+
+        .benefit-card h3 {
+            font-size: 22px;
+            color: #002B5C;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .benefit-card p {
+            font-size: 16px;
+            color: #666;
+            margin: 0;
+        }
+
+        .benefit-icon {
+            font-size: 28px;
+        }
+
         /* Footer */
 
         @media (max-width: 768px) {
@@ -355,7 +399,7 @@
                             <a href="#" class="nav-dropdown-header">Carrières en petite enfance</a>
                             <a href="emplois-cpe.html" class="nav-dropdown-subitem">Emplois disponibles</a>
                             <a href="emplois-cpe.html#faq" class="nav-dropdown-subitem">FAQ</a>
-                            <a href="conditions-travail.html" class="nav-dropdown-subitem">Conditions de travail</a>
+                            <a href="emplois-cpe.html#conditions-travail" class="nav-dropdown-subitem">Conditions de travail</a>
                             <a href="conditions-affectation.html" class="nav-dropdown-subitem">Conditions d'affectation</a>
                             <a href="processus-embauche.html" class="nav-dropdown-subitem">Processus d'embauche</a>
                             <a href="nouveautes.html" class="nav-dropdown-subitem">Nouveautés à venir</a>
@@ -944,16 +988,85 @@
         </div>
     </section>
 
+    <!-- Conditions de travail Section -->
+    <section id="conditions-travail" class="content-section" style="background: #f8f9fa;">
+        <div class="content-container">
+            <div class="section-header">
+                <h2>Conditions de travail</h2>
+                <p>Découvrez les avantages et conditions qui font de SAGIR un employeur de choix</p>
+            </div>
+
+            <p style="font-size: 18px; color: #555; margin-bottom: 40px; line-height: 1.8;">
+                Chez l'Agence SAGIR, nous comprenons que des conditions de travail optimales sont essentielles
+                pour attirer et retenir les meilleurs talents. C'est pourquoi nous nous engageons à offrir
+                un environnement professionnel respectueux, flexible et enrichissant.
+            </p>
+
+            <h2 style="font-size: 32px; color: #002B5C; margin: 40px 0 24px;">💼 Rémunération et paie</h2>
+            <p style="font-size: 18px; color: #555; margin-bottom: 20px; line-height: 1.8;">
+                À partir de 23$ pour les éducatrices en cours de qualification et de 27,15$ pour les éducatrices qualifiées.
+                Paie gérée par employeur D, à chaque 2 semaines.
+            </p>
+
+            <h2 style="font-size: 32px; color: #002B5C; margin: 40px 0 24px;">📅 Flexibilité d'horaire</h2>
+            <p style="font-size: 18px; color: #555; margin-bottom: 20px; line-height: 1.8;">
+                Nous respectons votre besoin d'équilibre entre vie professionnelle et vie personnelle.
+                Choisissez des mandats qui correspondent à vos disponibilités, que vous préfériez travailler
+                à temps plein, à temps partiel, ou sur appel selon vos besoins.
+            </p>
+
+            <h2 style="font-size: 32px; color: #002B5C; margin: 40px 0 24px;">Avantages sociaux</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <h3><span class="benefit-icon">📚</span> Formation continue</h3>
+                    <p>Possibilités de perfectionnement professionnel et accès à des formations spécialisées.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3><span class="benefit-icon">⏰</span> Horaires flexibles</h3>
+                    <p>Choisissez vos disponibilités et acceptez les mandats qui vous conviennent.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3><span class="benefit-icon">🎯</span> Variété des mandats</h3>
+                    <p>Diversifiez votre expérience en travaillant dans différents milieux et établissements.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3><span class="benefit-icon">💳</span> Paiement rapide</h3>
+                    <p>Paie à chaque 2 semaines par dépôt direct pour votre tranquillité d'esprit.</p>
+                </div>
+            </div>
+
+            <h2 style="font-size: 32px; color: #002B5C; margin: 40px 0 24px;">💰 RVER et primes</h2>
+            <p style="font-size: 18px; color: #555; margin-bottom: 20px; line-height: 1.8;">
+                Cotisation employeur de 2% de votre salaire. Prime d'assiduité jusqu'à 4 congés payés par année,
+                prime de déplacement pour les CPE plus éloignés.
+            </p>
+
+            <h2 style="font-size: 32px; color: #002B5C; margin: 40px 0 24px;">🛡️ Environnement de travail sécuritaire</h2>
+            <p style="font-size: 18px; color: #555; margin-bottom: 20px; line-height: 1.8;">
+                La santé et la sécurité de notre personnel sont nos priorités. Nous veillons à ce que tous
+                nos milieux de travail respectent les normes de santé et sécurité au travail. Vous bénéficiez
+                également de la CNESST et des protections légales applicables.
+            </p>
+
+            <div class="info-box" style="background: #e3f2fd; border-left: 4px solid #002B5C; padding: 24px; border-radius: 8px; margin: 30px 0;">
+                <h3 style="color: #002B5C; font-size: 20px; margin-bottom: 12px;">✨ Ce qui nous distingue</h3>
+                <p style="margin: 0; color: #555; font-size: 16px; line-height: 1.8;">
+                    Contrairement à d'autres agences, SAGIR valorise la relation humaine et le bien-être
+                    de ses employés. Nous ne sommes pas qu'une agence de placement, nous sommes votre
+                    partenaire de carrière. Notre équipe est toujours disponible pour vous écouter,
+                    vous conseiller et vous accompagner dans votre développement professionnel.
+                </p>
+            </div>
+        </div>
+    </section>
+
     <!-- CTA Section -->
     <section class="cta-section">
         <div class="cta-content">
-            <h2>Vous ne trouvez pas le mandat idéal ?</h2>
-            <p>
-                Envoyez-nous votre candidature spontanée! Nous sommes toujours à la recherche de 
-                nouveaux talents pour rejoindre notre équipe.
-            </p>
+            <h2>Prêt à rejoindre notre équipe?</h2>
+            <p>Découvrez les opportunités qui vous attendent chez SAGIR</p>
             <div class="cta-buttons">
-                <a href="contact.html" class="btn btn-primary">Envoyer ma candidature</a>
+                <a href="postuler-emplois-cpe.html" class="btn btn-primary">Postuler maintenant</a>
                 <a href="tel:450.313.0465" class="btn btn-secondary">📞 Nous appeler</a>
             </div>
         </div>
