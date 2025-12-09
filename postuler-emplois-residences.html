@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postuler - Emplois Résidences pour Aînés - Agence SAGIR</title>
+    <link rel="stylesheet" href="styles/common.css">
+    <style>
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #002B5C 0%, #004080 100%);
+            padding: 80px 40px 60px;
+            color: white;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 20px;
+            opacity: 0.95;
+            margin-bottom: 0;
+        }
+
+        /* Form Section */
+        .form-section {
+            padding: 80px 40px;
+            background: #f8f9fa;
+        }
+
+        .form-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            padding: 48px;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-intro {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .form-intro h2 {
+            font-size: 32px;
+            color: #002B5C;
+            margin-bottom: 16px;
+        }
+
+        .form-intro p {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.7;
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 16px;
+            font-weight: 600;
+            color: #002B5C;
+            margin-bottom: 8px;
+        }
+
+        .form-group label .required {
+            color: #d32f2f;
+            margin-left: 4px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 16px;
+            font-size: 16px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            font-family: inherit;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #002B5C;
+            box-shadow: 0 0 0 3px rgba(0, 43, 92, 0.1);
+        }
+
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .form-group input[type="file"] {
+            padding: 8px;
+            cursor: pointer;
+        }
+
+        .form-group .help-text {
+            font-size: 14px;
+            color: #666;
+            margin-top: 6px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+
+        .checkbox-group {
+            margin-bottom: 24px;
+        }
+
+        .checkbox-group label {
+            display: block;
+            font-size: 16px;
+            font-weight: 600;
+            color: #002B5C;
+            margin-bottom: 12px;
+        }
+
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .checkbox-item input[type="checkbox"] {
+            width: auto;
+            margin-right: 12px;
+            cursor: pointer;
+        }
+
+        .checkbox-item label {
+            margin: 0;
+            font-weight: 400;
+            color: #555;
+            cursor: pointer;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 16px 32px;
+            background: #002B5C;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background: #003d7a;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(0, 43, 92, 0.2);
+        }
+
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+
+        /* Info Section */
+        .info-section {
+            padding: 60px 40px;
+            background: white;
+        }
+
+        .info-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 32px;
+            margin-top: 40px;
+        }
+
+        .info-card {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 32px;
+            text-align: center;
+        }
+
+        .info-card .icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+        }
+
+        .info-card h3 {
+            font-size: 20px;
+            color: #002B5C;
+            margin-bottom: 12px;
+        }
+
+        .info-card p {
+            color: #555;
+            line-height: 1.7;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .form-container {
+                padding: 32px 24px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .form-intro h2 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="top-bar-content">
+            <a href="tel:450.313.0465" class="top-bar-item">
+                📞 450.313.0465
+            </a>
+            <a href="tel:819.489.1115" class="top-bar-item">
+                📞 819.489.1115
+            </a>
+            <a href="mailto:info@agencesagir.com" class="top-bar-item">
+                ✉️ info@agencesagir.com
+            </a>
+            <div class="top-bar-social">
+                <a href="https://www.facebook.com/communautesagir" target="_blank" rel="noopener" class="top-bar-social-link facebook" aria-label="Facebook" title="Facebook">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                    </svg>
+                </a>
+                <a href="https://www.instagram.com/agence_sagir/" target="_blank" rel="noopener" class="top-bar-social-link instagram" aria-label="Instagram" title="Instagram">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                    </svg>
+                </a>
+                <a href="https://www.linkedin.com/company/agencesagir" target="_blank" rel="noopener" class="top-bar-social-link" aria-label="LinkedIn" title="LinkedIn">in</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <img src="images/logo.jpg" alt="Agence SAGIR">
+            </a>
+
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#" class="nav-link active">
+                        Carrières
+                        <span>▾</span>
+                    </a>
+                    <div class="nav-dropdown">
+                        <div class="nav-dropdown-group">
+                            <a href="#" class="nav-dropdown-header">Carrières en petite enfance</a>
+                            <a href="emplois-cpe.html" class="nav-dropdown-subitem">Emplois disponibles</a>
+                            <a href="emplois-cpe.html#faq" class="nav-dropdown-subitem">FAQ</a>
+                            <a href="emplois-cpe.html#conditions-travail" class="nav-dropdown-subitem">Conditions de travail</a>
+                            <a href="conditions-affectation.html" class="nav-dropdown-subitem">Conditions d'affectation</a>
+                            <a href="processus-embauche.html" class="nav-dropdown-subitem">Processus d'embauche</a>
+                            <a href="nouveautes.html" class="nav-dropdown-subitem">Nouveautés à venir</a>
+                        </div>
+                        <div class="nav-dropdown-group">
+                            <a href="#" class="nav-dropdown-header">Carrières pour les résidences pour aînés</a>
+                            <a href="emplois-residences.html" class="nav-dropdown-subitem">Emplois disponibles</a>
+                            <a href="faq.html" class="nav-dropdown-subitem">FAQ</a>
+                            <a href="conditions-travail.html" class="nav-dropdown-subitem">Conditions de travail</a>
+                            <a href="conditions-affectation.html" class="nav-dropdown-subitem">Conditions d'affectation</a>
+                            <a href="processus-embauche.html" class="nav-dropdown-subitem">Processus d'embauche</a>
+                            <a href="nouveautes.html" class="nav-dropdown-subitem">Nouveautés à venir</a>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        Gestionnaires
+                        <span>▾</span>
+                    </a>
+                    <div class="nav-dropdown">
+                        <a href="cpe-landing.html" class="nav-dropdown-item">Services petite enfance</a>
+                        <a href="residence-aines.html" class="nav-dropdown-item">Services résidences aînés</a>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        Qui sommes-nous?
+                        <span>▾</span>
+                    </a>
+                    <div class="nav-dropdown">
+                        <a href="qui-sommes-nous.html" class="nav-dropdown-item">À propos</a>
+                        <a href="regions-desservies.html" class="nav-dropdown-item">Régions desservies</a>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+
+            <a href="#" class="nav-cta">CONNEXION</a>
+
+            <button class="mobile-menu-toggle">☰</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Postuler pour un emploi en résidences pour aînés</h1>
+            <p>Rejoignez notre équipe et faites la différence dans la vie des aînés</p>
+        </div>
+    </section>
+
+    <!-- Form Section -->
+    <section class="form-section">
+        <div class="form-container">
+            <div class="form-intro">
+                <h2>Formulaire de candidature</h2>
+                <p>Remplissez le formulaire ci-dessous pour soumettre votre candidature. Nous examinerons votre dossier et vous contacterons dans les plus brefs délais.</p>
+            </div>
+
+            <form action="#" method="POST" enctype="multipart/form-data">
+                <!-- Informations personnelles -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="prenom">Prénom<span class="required">*</span></label>
+                        <input type="text" id="prenom" name="prenom" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="nom">Nom<span class="required">*</span></label>
+                        <input type="text" id="nom" name="nom" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Courriel<span class="required">*</span></label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telephone">Téléphone<span class="required">*</span></label>
+                        <input type="tel" id="telephone" name="telephone" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="adresse">Adresse complète<span class="required">*</span></label>
+                    <input type="text" id="adresse" name="adresse" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="ville">Ville<span class="required">*</span></label>
+                        <input type="text" id="ville" name="ville" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="code_postal">Code postal<span class="required">*</span></label>
+                        <input type="text" id="code_postal" name="code_postal" required>
+                    </div>
+                </div>
+
+                <!-- Poste souhaité -->
+                <div class="form-group">
+                    <label for="poste">Poste souhaité<span class="required">*</span></label>
+                    <select id="poste" name="poste" required>
+                        <option value="">Sélectionnez un poste</option>
+                        <option value="prepose-beneficiaires">Préposé(e) aux bénéficiaires</option>
+                        <option value="infirmier-auxiliaire">Infirmier(ère) auxiliaire</option>
+                        <option value="responsable-alimentaire">Responsable alimentaire</option>
+                        <option value="prepose-alimentation">Préposé(e) à l'alimentation</option>
+                        <option value="prepose-entretien">Préposé(e) à l'entretien ménager</option>
+                        <option value="autre">Autre</option>
+                    </select>
+                </div>
+
+                <!-- Formation et expérience -->
+                <div class="form-group">
+                    <label for="formation">Formation / Diplôme<span class="required">*</span></label>
+                    <input type="text" id="formation" name="formation" placeholder="Ex: DEP Assistance à la personne en résidence privée pour aînés" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="experience">Années d'expérience pertinente<span class="required">*</span></label>
+                    <select id="experience" name="experience" required>
+                        <option value="">Sélectionnez</option>
+                        <option value="moins-1an">Moins d'un an</option>
+                        <option value="1-2ans">1 à 2 ans</option>
+                        <option value="3-5ans">3 à 5 ans</option>
+                        <option value="5-10ans">5 à 10 ans</option>
+                        <option value="plus-10ans">Plus de 10 ans</option>
+                    </select>
+                </div>
+
+                <!-- Régions d'intérêt -->
+                <div class="checkbox-group">
+                    <label>Régions d'intérêt<span class="required">*</span></label>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="region-centre-quebec" name="regions[]" value="centre-quebec">
+                        <label for="region-centre-quebec">Centre-du-Québec</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="region-mauricie" name="regions[]" value="mauricie">
+                        <label for="region-mauricie">Mauricie</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="region-capitale" name="regions[]" value="capitale-nationale">
+                        <label for="region-capitale">Capitale Nationale</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="region-lanaudiere" name="regions[]" value="lanaudiere">
+                        <label for="region-lanaudiere">Lanaudière</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="region-laval" name="regions[]" value="laval">
+                        <label for="region-laval">Laval</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="region-montreal" name="regions[]" value="montreal">
+                        <label for="region-montreal">Montréal</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="region-monteregie" name="regions[]" value="monteregie">
+                        <label for="region-monteregie">Montérégie</label>
+                    </div>
+                </div>
+
+                <!-- Disponibilité -->
+                <div class="form-group">
+                    <label for="disponibilite">Disponibilité<span class="required">*</span></label>
+                    <select id="disponibilite" name="disponibilite" required>
+                        <option value="">Sélectionnez</option>
+                        <option value="immediat">Immédiate</option>
+                        <option value="2-semaines">Dans 2 semaines</option>
+                        <option value="1-mois">Dans 1 mois</option>
+                        <option value="flexible">Flexible</option>
+                    </select>
+                </div>
+
+                <!-- Documents -->
+                <div class="form-group">
+                    <label for="cv">Curriculum Vitae (CV)<span class="required">*</span></label>
+                    <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx" required>
+                    <p class="help-text">Formats acceptés: PDF, DOC, DOCX (max 5 Mo)</p>
+                </div>
+
+                <div class="form-group">
+                    <label for="lettre-motivation">Lettre de motivation (optionnel)</label>
+                    <input type="file" id="lettre-motivation" name="lettre_motivation" accept=".pdf,.doc,.docx">
+                    <p class="help-text">Formats acceptés: PDF, DOC, DOCX (max 5 Mo)</p>
+                </div>
+
+                <!-- Message -->
+                <div class="form-group">
+                    <label for="message">Message additionnel (optionnel)</label>
+                    <textarea id="message" name="message" placeholder="Parlez-nous de vos motivations, compétences particulières, ou toute information pertinente..."></textarea>
+                </div>
+
+                <!-- Submit -->
+                <button type="submit" class="submit-btn">Soumettre ma candidature</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Info Section -->
+    <section class="info-section">
+        <div class="info-container">
+            <div class="section-header">
+                <h2>Processus de recrutement</h2>
+                <p>Voici ce qui se passe après avoir soumis votre candidature</p>
+            </div>
+            <div class="info-grid">
+                <div class="info-card">
+                    <div class="icon">📧</div>
+                    <h3>Réception de votre candidature</h3>
+                    <p>Nous accusons réception de votre dossier dans les 24 heures</p>
+                </div>
+                <div class="info-card">
+                    <div class="icon">🔍</div>
+                    <h3>Analyse du dossier</h3>
+                    <p>Notre équipe évalue votre profil et vos qualifications</p>
+                </div>
+                <div class="info-card">
+                    <div class="icon">💬</div>
+                    <h3>Entrevue</h3>
+                    <p>Si votre profil correspond, nous vous contactons pour une entrevue</p>
+                </div>
+                <div class="info-card">
+                    <div class="icon">✅</div>
+                    <h3>Intégration</h3>
+                    <p>Bienvenue dans l'équipe SAGIR!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="footer-permit">Numéro de permis: AP-2103464</p>
+            <p style="margin-top: 8px;">Copyright © Agence de Placement SAGIR Inc.</p>
+            <div class="footer-social">
+                <a href="https://www.facebook.com/communautesagir" target="_blank" rel="noopener" class="footer-social-link facebook" aria-label="Facebook" title="Suivez-nous sur Facebook">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                    </svg>
+                </a>
+                <a href="https://www.instagram.com/agence_sagir/" target="_blank" rel="noopener" class="footer-social-link instagram" aria-label="Instagram" title="Suivez-nous sur Instagram">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                    </svg>
+                </a>
+                <a href="https://www.linkedin.com/company/agencesagir" target="_blank" rel="noopener" class="footer-social-link" aria-label="LinkedIn" title="Suivez-nous sur LinkedIn">in</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
