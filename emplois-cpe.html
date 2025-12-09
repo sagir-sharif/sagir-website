@@ -202,6 +202,86 @@
             color: #002B5C;
         }
 
+        /* FAQ Section */
+        .faq-section {
+            padding: 80px 40px;
+            background: white;
+        }
+
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            margin-bottom: 16px;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            border-color: #002B5C;
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 20px 24px;
+            background: white;
+            border: none;
+            text-align: left;
+            font-size: 16px;
+            font-weight: 600;
+            color: #002B5C;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background: #f8f9fa;
+        }
+
+        .faq-icon {
+            font-size: 20px;
+            transition: transform 0.3s ease;
+            color: #002B5C;
+            flex-shrink: 0;
+            margin-left: 16px;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-answer-content {
+            padding: 0 24px 20px 24px;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .faq-answer-content ul {
+            margin: 12px 0 12px 20px;
+            list-style: disc;
+        }
+
+        .faq-answer-content li {
+            margin-bottom: 8px;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 1000px;
+        }
+
         /* Footer */
 
         @media (max-width: 768px) {
@@ -346,35 +426,521 @@
                 <!-- Job Card 1 -->
                 <div class="job-card">
                     <div class="job-badge">Petite enfance</div>
-                    <h3>Éducateurs et éducatrices à l'enfance</h3>
+                    <h3>Éducatrice à l'enfance</h3>
                     <div class="job-meta">
                         <div class="job-meta-item">📍 Plusieurs régions</div>
                         <div class="job-meta-item">⏰ Temps plein / partiel</div>
                     </div>
-                    <p>
-                        Nous sommes activement à la recherche d'éducateurs et d'éducatrices à l'enfance.
-                        Tu as de l'expérience en CPE ou en garderie? Rejoins notre équipe dynamique pour
-                        des remplacements dans le réseau de la petite enfance.
+
+                    <h4 style="font-size: 16px; color: #002B5C; margin: 16px 0 8px; font-weight: 600;">Description :</h4>
+                    <p style="margin-bottom: 12px;">
+                        Nous recherchons une éducatrice à l'enfance passionnée pour accompagner les enfants dans leur développement global. La personne retenue sera responsable de :
                     </p>
-                    <a href="contact.html" class="job-btn">Postuler maintenant →</a>
+                    <ul style="margin: 0 0 16px 20px; color: #555; line-height: 1.7;">
+                        <li>Observer et évaluer le développement de chaque enfant</li>
+                        <li>Rédiger les portraits développementaux (lorsque demandé)</li>
+                        <li>Planifier et animer des activités éducatives stimulantes</li>
+                        <li>Assurer un environnement sécuritaire et bienveillant</li>
+                        <li>Appliquer le programme éducatif du Ministère de la Famille</li>
+                    </ul>
+
+                    <h4 style="font-size: 16px; color: #002B5C; margin: 16px 0 8px; font-weight: 600;">Exigences :</h4>
+                    <ul style="margin: 0 0 16px 20px; color: #555; line-height: 1.7;">
+                        <li>Diplôme DEC ou AEC en Éducation à l'enfance</li>
+                        <li>Ou minimum 600 heures d'expérience pratique en CPE, garderie subventionnée ou privée</li>
+                        <li>Connaissance du programme éducatif du Ministère de la Famille</li>
+                        <li>Capacité à gérer un groupe d'enfants de manière sécuritaire et stimulante</li>
+                        <li>Excellentes compétences en observation, rédaction et planification d'activités</li>
+                    </ul>
+
+                    <h4 style="font-size: 16px; color: #002B5C; margin: 16px 0 8px; font-weight: 600;">Pourquoi nous rejoindre ?</h4>
+                    <ul style="margin: 0 0 20px 20px; color: #555; line-height: 1.7;">
+                        <li>Le meilleur salaire et la meilleure flexibilité quant aux horaires et aux mandats choisis</li>
+                        <li>Opportunité de contribuer au développement des enfants</li>
+                        <li>Possibilité de rejoindre une équipe dévouée et dynamique</li>
+                        <li>RVER, prime d'assiduité et prime de déplacement applicable selon la distance</li>
+                    </ul>
+
+                    <a href="postuler-emplois-cpe.html" class="job-btn">Postuler maintenant →</a>
                 </div>
 
                 <!-- Job Card 2 -->
                 <div class="job-card">
                     <div class="job-badge">Petite enfance</div>
-                    <h3>Éducateur ou éducatrice spécialisée</h3>
+                    <h3>Éducatrice spécialisée en petite enfance</h3>
                     <div class="job-meta">
                         <div class="job-meta-item">📍 Plusieurs régions</div>
                         <div class="job-meta-item">⏰ Temps plein / partiel</div>
                     </div>
-                    <p>
-                        Tu es passionné(e) par les défis et le potentiel adaptatif humain? Tu es ouvert(e)
-                        d'esprit, créative et dynamique? Tu as une facilité à t'adapter dans différents
-                        milieux? Ce poste est pour toi!
+
+                    <h4 style="font-size: 16px; color: #002B5C; margin: 16px 0 8px; font-weight: 600;">Description :</h4>
+                    <p style="margin-bottom: 12px;">
+                        Nous recherchons une éducatrice spécialisée en petite enfance pour accompagner et soutenir les enfants ayant des besoins particuliers. La personne retenue sera responsable de :
                     </p>
-                    <a href="contact.html" class="job-btn">Postuler maintenant →</a>
+                    <ul style="margin: 0 0 16px 20px; color: #555; line-height: 1.7;">
+                        <li>Observer et évaluer le développement des enfants</li>
+                        <li>Rédiger des plans d'intervention et planifier les stratégies d'intervention adaptées</li>
+                        <li>Supporter la gestion du groupe et l'intégration des enfants</li>
+                        <li>Planifier et animer des activités stimulantes favorisant l'autonomie et le développement global</li>
+                        <li>Assurer un environnement sécuritaire et bienveillant</li>
+                        <li>Collaborer avec les équipes éducatives et les parents pour le suivi des enfants</li>
+                    </ul>
+
+                    <h4 style="font-size: 16px; color: #002B5C; margin: 16px 0 8px; font-weight: 600;">Exigences :</h4>
+                    <ul style="margin: 0 0 16px 20px; color: #555; line-height: 1.7;">
+                        <li>DEC ou AEC en éducation spécialisée ou en petite enfance</li>
+                        <li>Ou expérience pertinente auprès d'enfants ayant des besoins particuliers</li>
+                        <li>Connaissance du programme éducatif du Ministère de la Famille et des pratiques adaptées</li>
+                        <li>Capacité à gérer un groupe d'enfants de manière sécuritaire et stimulante</li>
+                        <li>Compétences en observation, planification et rédaction de plans d'intervention</li>
+                    </ul>
+
+                    <h4 style="font-size: 16px; color: #002B5C; margin: 16px 0 8px; font-weight: 600;">Pourquoi nous rejoindre ?</h4>
+                    <ul style="margin: 0 0 20px 20px; color: #555; line-height: 1.7;">
+                        <li>Le meilleur salaire et la meilleure flexibilité quant aux horaires et aux mandats choisis</li>
+                        <li>Opportunité de contribuer au développement des enfants</li>
+                        <li>Possibilité de rejoindre une équipe dévouée et dynamique</li>
+                        <li>RVER, prime d'assiduité et prime de déplacement applicable selon la distance</li>
+                    </ul>
+
+                    <a href="postuler-emplois-cpe.html" class="job-btn">Postuler maintenant →</a>
+                </div>
+
+                <!-- Job Card 3 -->
+                <div class="job-card">
+                    <div class="job-badge">Petite enfance</div>
+                    <h3>Responsable alimentaire</h3>
+                    <div class="job-meta">
+                        <div class="job-meta-item">📍 Plusieurs régions</div>
+                        <div class="job-meta-item">⏰ Temps plein / partiel</div>
+                    </div>
+
+                    <h4 style="font-size: 16px; color: #002B5C; margin: 16px 0 8px; font-weight: 600;">Description :</h4>
+                    <p style="margin-bottom: 12px;">
+                        Nous recherchons un(e) responsable alimentaire pour assurer la gestion complète de la cuisine et la qualité de l'alimentation des enfants. La personne retenue sera responsable de :
+                    </p>
+                    <ul style="margin: 0 0 16px 20px; color: #555; line-height: 1.7;">
+                        <li>Établir les menus quotidiens (2 collations et 1 repas) selon le Guide alimentaire canadien et en tenant compte des allergies et intolérances des enfants</li>
+                        <li>Gérer les commandes et le suivi des stocks</li>
+                        <li>Superviser le retour et la propreté de la vaisselle</li>
+                        <li>Assurer le respect des normes d'hygiène et de salubrité en tout temps</li>
+                        <li>Encadrer et coordonner le personnel de cuisine</li>
+                    </ul>
+
+                    <h4 style="font-size: 16px; color: #002B5C; margin: 16px 0 8px; font-weight: 600;">Exigences :</h4>
+                    <ul style="margin: 0 0 16px 20px; color: #555; line-height: 1.7;">
+                        <li>DEP en cuisine d'établissement</li>
+                        <li>Attestation MAPAQ gestion d'établissement et hygiène et salubrité</li>
+                        <li>Expérience pertinente comme chef de cuisine ou responsable d'établissement</li>
+                        <li>Connaissance des normes alimentaires et des pratiques sécuritaires en cuisine</li>
+                        <li>Capacité à planifier, organiser et gérer les opérations quotidiennes de la cuisine</li>
+                    </ul>
+
+                    <h4 style="font-size: 16px; color: #002B5C; margin: 16px 0 8px; font-weight: 600;">Pourquoi nous rejoindre ?</h4>
+                    <ul style="margin: 0 0 20px 20px; color: #555; line-height: 1.7;">
+                        <li>Le meilleur salaire et la meilleure flexibilité quant aux horaires et aux mandats choisis</li>
+                        <li>Opportunité de contribuer au développement des enfants</li>
+                        <li>Possibilité de rejoindre une équipe dévouée et dynamique</li>
+                        <li>RVER, prime d'assiduité et prime de déplacement applicable selon la distance</li>
+                    </ul>
+
+                    <a href="postuler-emplois-cpe.html" class="job-btn">Postuler maintenant →</a>
+                </div>
+
+                <!-- Job Card 4 -->
+                <div class="job-card">
+                    <div class="job-badge">Petite enfance</div>
+                    <h3>Préposé à l'entretien ménager</h3>
+                    <div class="job-meta">
+                        <div class="job-meta-item">📍 Plusieurs régions</div>
+                        <div class="job-meta-item">⏰ Temps plein / partiel</div>
+                    </div>
+
+                    <h4 style="font-size: 16px; color: #002B5C; margin: 16px 0 8px; font-weight: 600;">Description :</h4>
+                    <p style="margin-bottom: 12px;">
+                        Nous recherchons un(e) préposé(e) à l'entretien ménager pour assurer la propreté et l'hygiène des installations. La personne retenue sera responsable de :
+                    </p>
+                    <ul style="margin: 0 0 16px 20px; color: #555; line-height: 1.7;">
+                        <li>Effectuer le nettoyage et la désinfection selon les normes, incluant les surfaces à contact fréquent (high-touch)</li>
+                        <li>Appliquer les normes SIMDUT et PCI pour la manipulation des produits et équipements</li>
+                        <li>Prioriser et organiser les tâches de manière efficace</li>
+                        <li>Maintenir un environnement sécuritaire et bien entretenu</li>
+                        <li>Faire preuve de minutie, de sens de l'initiative, de fiabilité et d'honnêteté</li>
+                    </ul>
+
+                    <h4 style="font-size: 16px; color: #002B5C; margin: 16px 0 8px; font-weight: 600;">Exigences :</h4>
+                    <ul style="margin: 0 0 16px 20px; color: #555; line-height: 1.7;">
+                        <li>Expérience minimale de 3 ans dans un poste similaire</li>
+                        <li>Connaissance des normes SIMDUT et PCI</li>
+                        <li>Capacité à organiser, prioriser et exécuter les tâches avec rigueur</li>
+                        <li>Sens de l'initiative et attention aux détails</li>
+                    </ul>
+
+                    <h4 style="font-size: 16px; color: #002B5C; margin: 16px 0 8px; font-weight: 600;">Pourquoi nous rejoindre ?</h4>
+                    <ul style="margin: 0 0 20px 20px; color: #555; line-height: 1.7;">
+                        <li>Le meilleur salaire et la meilleure flexibilité quant aux horaires et aux mandats choisis</li>
+                        <li>Opportunité de contribuer au développement des enfants</li>
+                        <li>Possibilité de rejoindre une équipe dévouée et dynamique</li>
+                        <li>RVER, prime d'assiduité et prime de déplacement applicable selon la distance</li>
+                    </ul>
+
+                    <a href="postuler-emplois-cpe.html" class="job-btn">Postuler maintenant →</a>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="faq-container">
+            <div class="section-header">
+                <h2>Foire aux questions (FAQ)</h2>
+                <p>Trouvez les réponses aux questions les plus fréquentes</p>
+            </div>
+
+            <!-- FAQ Items -->
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Êtes-vous en mesure d'émettre un contrat de travail et de demander l'EIMT et le CAQ pour que je puisse obtenir un permis de travail fermé?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Non. Comme agence de remplacement, nous n'offrons pas de postes permanents avec des garanties d'heures, ce qui est requis pour une démarche d'EIMT ou de CAQ.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Recrutez-vous à l'international?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Non. Nos besoins étant urgents et variables, nous concentrons notre recrutement local.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Quels types de postes offrez-vous?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Nous offrons des postes de remplacement dans différents milieux (CPE, garderies, écoles, résidences, etc.). Les horaires et la durée des mandats varient. Nous n'offrons pas de postes permanents garantis.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Offrez-vous des postes à temps plein?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Nos postes sont principalement temporaires ou occasionnels. Certains mandats peuvent être à temps plein temporairement, mais il ne s'agit pas de postes permanents.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Comment fonctionne le travail de remplacement?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Vous recevez des offres selon vos disponibilités, votre lieu de résidence et votre expérience. Vous êtes libre d'accepter ou de refuser les remplacements proposés.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Avez-vous des exigences de formation?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Les exigences varient selon les milieux. Certaines fonctions nécessitent une formation spécifique, tandis que d'autres postes sont accessibles sans diplôme spécialisé.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Avez-vous besoin d'expérience pour postuler?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>L'expérience est un atout, mais plusieurs milieux acceptent des candidats débutants.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Dois-je être disponible à temps plein pour travailler avec vous?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Non. Vous choisissez vos disponibilités. Nous tentons d'adapter les remplacements à votre horaire.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Comment puis-je postuler?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Remplissez notre formulaire en ligne ou envoyez votre CV. Un membre de notre équipe vous contactera.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Quelle formation dois-je avoir complétée pour être éducatrice qualifiée?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Pour être éducatrice qualifiée, vous devez avoir complété :</p>
+                        <ul>
+                            <li>DEC en Techniques d'éducation à l'enfance (2 700–2 850 h)</li>
+                            <li>AEC en Techniques d'éducation à l'enfance (1 200–1 800 h)</li>
+                            <li>Baccalauréat en éducation préscolaire et enseignement primaire (4 ans, environ 5 000 h)</li>
+                            <li>Autres diplômes reconnus équivalents par le Ministère</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Est-ce que la formation RSG 45 heures est reconnue pour être éducatrice qualifiée?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Non. La formation RSG 45 h permet de devenir RSGE (responsable d'un service de garde en milieu familial), mais ne confère pas le statut d'éducatrice qualifiée.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Combien d'heures qualifiantes dois-je avoir pour être éducatrice qualifiée si je détiens un AEC?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Au Québec, avec un AEC en techniques d'éducation à l'enfance, vous êtes considérée formée, mais devez acquérir 4 992 heures d'expérience qualifiante.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Quels sont les types de milieux de garde reconnus pour les heures qualifiantes?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Les heures qualifiantes doivent être effectuées dans des milieux reconnus par le Ministère :</p>
+                        <ul>
+                            <li>CPE subventionnés ou non</li>
+                            <li>Garderies privées subventionnées</li>
+                            <li>Services de garde en milieu familial reconnus (par un bureau coordonnateur)</li>
+                            <li>RSG ou RSGE reconnus</li>
+                        </ul>
+                        <p>Les services de garde scolaires et les milieux familiaux privés non reconnus ne comptent pas.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Si je n'ai pas de formation mais que j'ai de l'expérience, puis-je postuler?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Oui, si vous avez au moins 600 heures d'expérience qualifiante et l'intention de suivre une formation reconnue (RAC, AEC, COUD, DEC). Les formations suivantes sont des atouts :</p>
+                        <ul>
+                            <li>Accueillir la petite enfance</li>
+                            <li>Gestion de groupe (Cégep de Sainte-Foy)</li>
+                            <li>Les premiers pas en petite enfance (90 h)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(this)">
+                    <span>J'ai envoyé mon CV mais je n'ai pas eu de réponse. Que faire?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Vérifiez que votre CV met en évidence :</p>
+                        <ul>
+                            <li>Votre expérience en petite enfance</li>
+                            <li>Vos formations pertinentes</li>
+                        </ul>
+                        <p>Assurez-vous également que votre courriel et numéro de téléphone sont corrects.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Puis-je travailler à temps partiel?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Oui, à condition de :</p>
+                        <ul>
+                            <li>Avoir minimum 1 journée par semaine entre lundi et vendredi</li>
+                            <li>Être disponible de 7 h à 18 h</li>
+                        </ul>
+                        <p>Vous pouvez choisir vos remplacements selon vos préférences pour les ouvertures ou fermetures, mais certaines journées peuvent faire 9 à 9,25 h.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Si je suis disponible seulement de 9 h à 16 h, aurai-je des remplacements?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Non. Vous devez avoir des disponibilités entre 7 h et 18 h. Certaines journées peuvent être plus longues, jusqu'à 9,25 h.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Quels sont les horaires types?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <ul>
+                            <li>Journées de 6 à 9,25 h</li>
+                            <li>Semaines de 4 à 5 journées pour temps plein</li>
+                            <li>Temps plein = 32 à 38 h/semaine</li>
+                            <li>Possibilité de temps supplémentaire selon les besoins</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Puis-je travailler pendant le temps des fêtes?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Peu de remplacements disponibles en raison de :</p>
+                        <ul>
+                            <li>La baisse de fréquentation des enfants</li>
+                            <li>Le nombre réduit de jours d'ouverture des milieux</li>
+                        </ul>
+                        <p>Certains besoins peuvent survenir, restez disponible.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Puis-je postuler si je viens de débuter ma formation et que je n'ai pas d'expérience?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Vous devez :</p>
+                        <ul>
+                            <li>Avoir complété au moins votre AEC ou</li>
+                            <li>Avoir 600 heures d'expérience qualifiante (les stages comptent)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Lors des remplacements, serai-je dans un groupe différent chaque jour?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Nous essayons de maintenir la stabilité pour le milieu et les enfants. Il peut arriver à l'occasion de travailler dans plusieurs milieux différents, mais c'est exceptionnel.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Est-ce que je vais recevoir mes horaires le matin même?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Non. Les horaires sont communiqués à l'avance, même si certains ajustements de dernière minute peuvent survenir.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Est-ce possible de manquer d'heures de remplacement même en travaillant à temps plein?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Oui, cela peut arriver selon les besoins des milieux et les périodes de faible fréquentation. Nous proposons des formations pertinentes pendant les baisses d'heures, mais cela reste peu fréquent.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Comment fonctionne le calcul des journées fériées?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Le calcul se fait selon la moyenne des heures travaillées dans les 4 semaines précédentes au jour férié.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Comment fonctionne la paie?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>La paie est versée toutes les deux semaines, le vendredi, même si le relevé de paie est reçu le jeudi.</p>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -413,6 +979,23 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        function toggleFAQ(button) {
+            const faqItem = button.parentElement;
+            const isActive = faqItem.classList.contains('active');
+
+            // Close all other FAQ items
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+            });
+
+            // Toggle current item
+            if (!isActive) {
+                faqItem.classList.add('active');
+            }
+        }
+    </script>
 
 </body>
 </html>
